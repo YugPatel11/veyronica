@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker volumes (local)
+.docker-data/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/.vercel
+*.tsbuildinfo
+
+# Storybook
+frontend/storybook-static/
+
+# MinIO data
+.minio-data/
+
+# Logs
+*.log
+
+# Design tooling (keep tokens, ignore generated)
+designpowers/
+
+# Secrets - NEVER commit
+*.pem
+*.key
+*.p12

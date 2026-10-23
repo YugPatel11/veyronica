@@ -1,0 +1,360 @@
+/* ==========================================================================
+   NEXUS Design Tokens — CSS Custom Properties
+   "Editorial Mission Control" Theme · Light Mode (Primary)
+   ========================================================================== */
+
+:root {
+  /* ──────────────────────────────────────────────────────────────────────────
+     LAYER 1: Global Tokens (raw values — never use directly in components)
+     ────────────────────────────────────────────────────────────────────────── */
+
+  /* Oat (canvas & backgrounds) */
+  --color-oat-50:      #F9F7F2;
+  --color-oat-100:     #F2EEE5;
+  --color-oat-200:     #E9E4D8;
+  --color-oat-300:     #D9D2C2;
+  --color-oat-400:     #C4BAA6;
+  --color-oat-500:     #A99E8A;
+
+  /* Cream (surfaces) */
+  --color-cream-50:    #FDFCFA;
+  --color-cream-100:   #FBF9F4;
+  --color-cream-200:   #F5F1E9;
+  --color-cream-300:   #EDE7DA;
+
+  /* Ink (text) */
+  --color-ink-900:     #1E2A32;
+  --color-ink-700:     #364650;
+  --color-ink-500:     #5E6B72;
+  --color-ink-400:     #7A8790;
+  --color-ink-300:     #9BA5AC;
+  --color-ink-200:     #C2CAD0;
+
+  /* Teal (primary) */
+  --color-teal-900:    #063D3D;
+  --color-teal-800:    #0A5656;
+  --color-teal-700:    #0E6B6B;
+  --color-teal-600:    #148080;
+  --color-teal-500:    #1A9494;
+  --color-teal-400:    #3DB5B5;
+  --color-teal-300:    #7CD4D4;
+  --color-teal-200:    #B3E6E6;
+  --color-teal-100:    #D7ECE9;
+  --color-teal-50:     #EBF5F3;
+
+  /* Saffron (human attention) */
+  --color-saffron-900: #7A4E0B;
+  --color-saffron-800: #A56810;
+  --color-saffron-700: #C47D1B;
+  --color-saffron-600: #E9A23B;
+  --color-saffron-500: #F0B556;
+  --color-saffron-400: #F5C97A;
+  --color-saffron-300: #F9DDA3;
+  --color-saffron-200: #FCF0D0;
+  --color-saffron-100: #FEF7E8;
+  --color-saffron-50:  #FFFBF3;
+
+  /* Blue (running, info) */
+  --color-blue-800:    #1F3F8C;
+  --color-blue-700:    #2B51AE;
+  --color-blue-600:    #3563C9;
+  --color-blue-500:    #4F7DDC;
+  --color-blue-400:    #7A9DE8;
+  --color-blue-200:    #C2D4F4;
+  --color-blue-100:    #E0EAFA;
+  --color-blue-50:     #F0F5FD;
+
+  /* Green (success) */
+  --color-green-800:   #1E5E3A;
+  --color-green-700:   #257548;
+  --color-green-600:   #2E8B57;
+  --color-green-500:   #3DA36C;
+  --color-green-400:   #65BF90;
+  --color-green-200:   #B5DFC9;
+  --color-green-100:   #DAEEE2;
+  --color-green-50:    #EDF7F1;
+
+  /* Red (danger, failed) */
+  --color-red-800:     #8C2C24;
+  --color-red-700:     #A83830;
+  --color-red-600:     #C8453B;
+  --color-red-500:     #D86054;
+  --color-red-400:     #E58880;
+  --color-red-200:     #F4C9C5;
+  --color-red-100:     #FAE4E2;
+  --color-red-50:      #FDF2F1;
+
+  /* Coral (AI accent) */
+  --color-coral-600:   #E8735A;
+  --color-coral-100:   #FCEAE4;
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     LAYER 2: Semantic Tokens (roles — use these in components)
+     ────────────────────────────────────────────────────────────────────────── */
+
+  /* Canvas & Surface */
+  --color-canvas:              var(--color-oat-100);
+  --color-surface:             var(--color-cream-100);
+  --color-surface-raised:      var(--color-cream-50);
+  --color-surface-sunken:      var(--color-oat-200);
+  --color-surface-overlay:     var(--color-cream-100);
+
+  /* Borders */
+  --color-border:              var(--color-oat-300);
+  --color-border-subtle:       var(--color-oat-200);
+  --color-border-strong:       var(--color-oat-400);
+
+  /* Text */
+  --color-text-primary:        var(--color-ink-900);
+  --color-text-secondary:      var(--color-ink-500);
+  --color-text-tertiary:       var(--color-ink-400);
+  --color-text-disabled:       var(--color-ink-300);
+  --color-text-on-primary:     #FFFFFF;
+  --color-text-on-saffron:     var(--color-saffron-900);
+
+  /* Primary (actions) */
+  --color-primary:             var(--color-teal-700);
+  --color-primary-hover:       var(--color-teal-800);
+  --color-primary-active:      var(--color-teal-900);
+  --color-primary-tint:        var(--color-teal-100);
+  --color-primary-subtle:      var(--color-teal-50);
+
+  /* Status */
+  --color-status-done:         var(--color-green-600);
+  --color-status-done-bg:      var(--color-green-50);
+  --color-status-running:      var(--color-blue-600);
+  --color-status-running-bg:   var(--color-blue-50);
+  --color-status-waiting:      var(--color-saffron-600);
+  --color-status-waiting-bg:   var(--color-saffron-50);
+  --color-status-failed:       var(--color-red-600);
+  --color-status-failed-bg:    var(--color-red-50);
+  --color-status-warning:      var(--color-saffron-600);
+  --color-status-warning-bg:   var(--color-saffron-100);
+
+  /* Interactive */
+  --color-focus-ring:          var(--color-teal-500);
+  --color-link:                var(--color-teal-700);
+  --color-link-hover:          var(--color-teal-800);
+
+  /* Special */
+  --color-ai-accent:           var(--color-coral-600);
+  --color-ai-accent-bg:        var(--color-coral-100);
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     LAYER 3: Component Tokens
+     ────────────────────────────────────────────────────────────────────────── */
+
+  /* Buttons */
+  --button-primary-bg:         var(--color-primary);
+  --button-primary-bg-hover:   var(--color-primary-hover);
+  --button-primary-text:       var(--color-text-on-primary);
+  --button-secondary-bg:       transparent;
+  --button-secondary-border:   var(--color-border);
+  --button-secondary-text:     var(--color-text-primary);
+  --button-danger-bg:          var(--color-status-failed);
+  --button-danger-text:        var(--color-text-on-primary);
+
+  /* Cards */
+  --card-bg:                   var(--color-surface);
+  --card-border:               var(--color-border-subtle);
+  --card-shadow:               var(--shadow-sm);
+
+  /* Sidebar */
+  --sidebar-bg:                var(--color-surface);
+  --sidebar-border:            var(--color-border);
+  --sidebar-item-hover:        var(--color-primary-subtle);
+  --sidebar-item-active:       var(--color-primary-tint);
+  --sidebar-item-text:         var(--color-text-secondary);
+  --sidebar-item-text-active:  var(--color-primary);
+
+  /* Approval Card */
+  --approval-card-bg:          var(--color-cream-50);
+  --approval-card-border:      var(--color-border);
+  --approval-card-stamp:       var(--color-primary);
+  --approval-card-urgent:      var(--color-status-waiting);
+
+  /* Ledger */
+  --ledger-chain-color:        var(--color-primary);
+  --ledger-verified-bg:        var(--color-status-done-bg);
+  --ledger-broken-bg:          var(--color-status-failed-bg);
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --font-heading: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Type scale */
+  --text-display-size:   2.25rem;
+  --text-display-line:   1.2;
+  --text-display-weight: 700;
+
+  --text-h1-size:        1.75rem;
+  --text-h1-line:        1.25;
+  --text-h1-weight:      700;
+
+  --text-h2-size:        1.375rem;
+  --text-h2-line:        1.3;
+  --text-h2-weight:      600;
+
+  --text-h3-size:        1.125rem;
+  --text-h3-line:        1.35;
+  --text-h3-weight:      600;
+
+  --text-body-size:      0.9375rem;
+  --text-body-line:      1.6;
+  --text-body-weight:    400;
+
+  --text-sm-size:        0.8125rem;
+  --text-sm-line:        1.5;
+  --text-sm-weight:      400;
+
+  --text-xs-size:        0.6875rem;
+  --text-xs-line:        1.45;
+  --text-xs-weight:      500;
+
+  --text-mono-size:      0.8125rem;
+  --text-mono-line:      1.5;
+
+  --text-stat-size:      2.5rem;
+  --text-stat-line:      1.1;
+  --text-stat-weight:    700;
+
+  --text-stat-sm-size:   1.5rem;
+  --text-stat-sm-line:   1.2;
+  --text-stat-sm-weight: 600;
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     SPACING (4px base grid)
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --space-0:    0;
+  --space-0-5:  2px;
+  --space-1:    4px;
+  --space-1-5:  6px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    20px;
+  --space-6:    24px;
+  --space-8:    32px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-16:   64px;
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     BORDER RADIUS
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --radius-none: 0;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     ELEVATION & SHADOW
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --shadow-none: none;
+  --shadow-xs:   0 1px 2px rgba(30, 42, 50, 0.04);
+  --shadow-sm:   0 1px 3px rgba(30, 42, 50, 0.06), 0 1px 2px rgba(30, 42, 50, 0.04);
+  --shadow-md:   0 4px 6px rgba(30, 42, 50, 0.06), 0 2px 4px rgba(30, 42, 50, 0.04);
+  --shadow-lg:   0 10px 15px rgba(30, 42, 50, 0.06), 0 4px 6px rgba(30, 42, 50, 0.04);
+  --shadow-xl:   0 20px 25px rgba(30, 42, 50, 0.08), 0 8px 10px rgba(30, 42, 50, 0.04);
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     MOTION
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --motion-instant:    0ms;
+  --motion-fast:       100ms;
+  --motion-normal:     200ms;
+  --motion-slow:       300ms;
+  --motion-deliberate: 500ms;
+  --motion-spring:     400ms;
+
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:       cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out:   cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     BREAKPOINTS (for reference — use Tailwind classes)
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --bp-sm:   640px;
+  --bp-md:   768px;
+  --bp-lg:   1024px;
+  --bp-xl:   1280px;
+  --bp-2xl:  1440px;
+
+  /* ──────────────────────────────────────────────────────────────────────────
+     LAYOUT
+     ────────────────────────────────────────────────────────────────────────── */
+
+  --sidebar-width:           240px;
+  --sidebar-width-collapsed: 64px;
+  --content-max-width:       1440px;
+  --page-padding:            var(--space-8);
+  --grid-columns:            12;
+  --grid-gutter:             var(--space-6);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   REDUCED MOTION
+   ────────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast:       0.01ms;
+    --motion-normal:     0.01ms;
+    --motion-slow:       0.01ms;
+    --motion-deliberate: 0.01ms;
+    --motion-spring:     0.01ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   FOCUS STYLES
+   ────────────────────────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   BASE STYLES
+   ────────────────────────────────────────────────────────────────────────── */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  color: var(--color-text-primary);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-size);
+}

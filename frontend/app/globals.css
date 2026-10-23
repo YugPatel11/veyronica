@@ -1,0 +1,165 @@
+/* ==========================================================================
+   NEXUS — Global Styles
+   "Editorial Mission Control" Design System
+   Tailwind CSS v4 — uses @import for config
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,400&display=swap");
+@import "tailwindcss";
+
+/* ==========================================================================
+   DESIGN TOKENS (from DESIGN.md — semantic tokens only, never raw hex)
+   ========================================================================== */
+
+@theme {
+  /* ── Colors: Canvas & Surface ──────────────────────────────────────── */
+  --color-canvas: #F2EEE5;
+  --color-surface: #FBF9F4;
+  --color-surface-raised: #FDFCFA;
+  --color-surface-sunken: #E9E4D8;
+
+  /* ── Colors: Borders ───────────────────────────────────────────────── */
+  --color-border: #D9D2C2;
+  --color-border-subtle: #E9E4D8;
+  --color-border-strong: #C4BAA6;
+
+  /* ── Colors: Ink (Text) ────────────────────────────────────────────── */
+  --color-ink: #1E2A32;
+  --color-ink-muted: #5E6B72;
+  --color-ink-faint: #7A8790;
+  --color-ink-disabled: #9BA5AC;
+
+  /* ── Colors: Primary (Teal) ────────────────────────────────────────── */
+  --color-primary: #0E6B6B;
+  --color-primary-hover: #0A5656;
+  --color-primary-active: #063D3D;
+  --color-primary-tint: #D7ECE9;
+  --color-primary-subtle: #EBF5F3;
+
+  /* ── Colors: Status ────────────────────────────────────────────────── */
+  --color-status-done: #2E8B57;
+  --color-status-done-bg: #EDF7F1;
+  --color-status-running: #3563C9;
+  --color-status-running-bg: #F0F5FD;
+  --color-status-waiting: #E9A23B;
+  --color-status-waiting-bg: #FFFBF3;
+  --color-status-failed: #C8453B;
+  --color-status-failed-bg: #FDF2F1;
+
+  /* ── Colors: Special ───────────────────────────────────────────────── */
+  --color-ai-accent: #E8735A;
+  --color-ai-accent-bg: #FCEAE4;
+  --color-saffron: #E9A23B;
+  --color-saffron-dark: #7A4E0B;
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-heading: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+
+  /* ── Border Radius ─────────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ── Shadows ───────────────────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(30, 42, 50, 0.04);
+  --shadow-sm: 0 1px 3px rgba(30, 42, 50, 0.06), 0 1px 2px rgba(30, 42, 50, 0.04);
+  --shadow-md: 0 4px 6px rgba(30, 42, 50, 0.06), 0 2px 4px rgba(30, 42, 50, 0.04);
+  --shadow-lg: 0 10px 15px rgba(30, 42, 50, 0.06), 0 4px 6px rgba(30, 42, 50, 0.04);
+
+  /* ── Motion ────────────────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 64px;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use serif font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Monospace elements */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   FOCUS STYLES (WCAG 2.2 AA)
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   SKIP LINK (Accessibility)
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================================
+   SCROLLBAR (subtle, matching theme)
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-sunken);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-disabled);
+}

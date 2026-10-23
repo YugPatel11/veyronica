@@ -1,0 +1,54 @@
+repos:
+  # ── Python ─────────────────────────────────────────────────────────────────
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.13
+    hooks:
+      - id: ruff
+        args: [--fix]
+        files: ^backend/
+      - id: ruff-format
+        files: ^backend/
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.16.0
+    hooks:
+      - id: mypy
+        files: ^backend/app/
+        additional_dependencies:
+          - pydantic>=2.11
+          - pydantic-settings>=2.9
+          - fastapi>=0.115
+          - types-redis
+        args: [--ignore-missing-imports]
+
+  # ── General ────────────────────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: check-json
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: detect-private-key
+
+  # ── JavaScript / TypeScript ────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.27.0
+    hooks:
+      - id: eslint
+        files: ^frontend/.*\.(ts|tsx)$
+        types: [file]
+        additional_dependencies:
+          - eslint@9.27.0
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        files: ^frontend/.*\.(ts|tsx|css|json)$
+        types: [file]
