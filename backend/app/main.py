@@ -35,6 +35,10 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
             "Set JWT_SECRET_KEY to a secure random value."
         )
 
+    # Validate secrets (EPIC-04-T08)
+    from app.core.secrets_validation import validate_secrets
+    validate_secrets()
+
     # Initialise Sentry
     if settings.sentry_dsn:
         sentry_sdk.init(

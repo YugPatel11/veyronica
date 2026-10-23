@@ -39,18 +39,18 @@
 
 ### EPIC-03: Database & Data Layer
 
-- [ ] `EPIC-03-T01` — Migration: users, roles, permissions tables with indexes *(EPIC-01-T04)*
-- [ ] `EPIC-03-T02` — Migration: agents, workflow_definitions, workflow_runs, tasks, task_events *(T01)*
-- [ ] `EPIC-03-T03` — Migration: audit_ledger with append-only constraints + monthly partitioning *(T01)*
-- [ ] `EPIC-03-T04` — Migration: approval_requests, approval_decisions *(T02)*
-- [ ] `EPIC-03-T05` — Migration: llm_calls, token_budgets, model_tiers *(T02)*
-- [ ] `EPIC-03-T06` — Migration: connectors, connector_calls *(T02)*
-- [ ] `EPIC-03-T07` — Migration: policies table (versioned YAML) *(T01)*
-- [ ] `EPIC-03-T08` — Migration: security_events, blocked_entities, login_attempts *(T01)*
-- [ ] `EPIC-03-T09` — Migration: documents, chunks (pgvector), question_bank *(T01)*
-- [ ] `EPIC-03-T10` — Migration: notifications table *(T01)*
-- [ ] `EPIC-03-T11` — SQLAlchemy 2 ORM models for all tables *(T01–T10)*
-- [ ] `EPIC-03-T12` — Database seed script (Faker en_IN) with story characters *(T11)*
+- [x] `EPIC-03-T01` — Migration: users, roles, permissions tables with indexes *(EPIC-01-T04)*
+- [x] `EPIC-03-T02` — Migration: agents, workflow_definitions, workflow_runs, tasks, task_events *(T01)*
+- [x] `EPIC-03-T03` — Migration: audit_ledger with append-only constraints + monthly partitioning *(T01)*
+- [x] `EPIC-03-T04` — Migration: approval_requests, approval_decisions *(T02)*
+- [x] `EPIC-03-T05` — Migration: llm_calls, token_budgets, model_tiers *(T02)*
+- [x] `EPIC-03-T06` — Migration: connectors, connector_calls *(T02)*
+- [x] `EPIC-03-T07` — Migration: policies table (versioned YAML) *(T01)*
+- [x] `EPIC-03-T08` — Migration: security_events, blocked_entities, login_attempts *(T01)*
+- [x] `EPIC-03-T09` — Migration: documents, chunks (pgvector), question_bank *(T01)*
+- [x] `EPIC-03-T10` — Migration: notifications table *(T01)*
+- [x] `EPIC-03-T11` — SQLAlchemy 2 ORM models for all tables *(T01–T10)*
+- [x] `EPIC-03-T12` — Database seed script (Faker en_IN) with story characters *(T11)*
 - [ ] `EPIC-03-T13` — Automated daily backup script with restore verification *(T02)*
 - [ ] `EPIC-03-T14` — Index plan with EXPLAIN ANALYZE for key queries *(T11)*
 

@@ -1,4 +1,4 @@
-"""Security middleware: CORS, security headers, request-ID injection."""
+"""Security middleware: CORS, security headers, rate limiting, input validation, request-ID."""
 
 from __future__ import annotations
 
@@ -15,7 +15,10 @@ logger = structlog.get_logger()
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
-    """Inject OWASP-recommended security headers into every response."""
+    """Inject OWASP-recommended security headers into every response.
+
+    EPIC-04-T06: Security headers (HSTS, CSP, X-Frame-Options).
+    """
 
     async def dispatch(
         self, request: Request, call_next: RequestResponseEndpoint
@@ -27,6 +30,11 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
         response.headers["Permissions-Policy"] = (
             "camera=(), microphone=(), geolocation=()"
+        )
+        response.headers["Content-Security-Policy"] = (
+            "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' "
+            "https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; "
+            "img-src 'self' data:; connect-src 'self'"
         )
         if not get_settings().is_development:
             response.headers["Strict-Transport-Security"] = (
@@ -80,11 +88,11 @@ def register_middleware(app: FastAPI) -> None:
     """Attach all middleware to the FastAPI app in correct order.
 
     Middleware execution is LIFO — last registered runs first.
-    Order: RequestId → Logging → SecurityHeaders → CORS
+    Order: RequestId → Logging → InputValidation → RateLimit → SecurityHeaders → CORS
     """
     settings = get_settings()
 
-    # CORS (runs first — outermost)
+    # CORS (runs first — outermost) — EPIC-04-T07
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.allowed_origins,
@@ -94,8 +102,16 @@ def register_middleware(app: FastAPI) -> None:
         expose_headers=["X-Request-ID"],
     )
 
-    # Security headers
+    # Security headers — EPIC-04-T06
     app.add_middleware(SecurityHeadersMiddleware)
+
+    # Rate limiting — EPIC-04-T05
+    from app.core.rate_limit import RateLimitMiddleware
+    app.add_middleware(RateLimitMiddleware)
+
+    # Input validation — EPIC-04-T10
+    from app.core.input_validation import InputValidationMiddleware
+    app.add_middleware(InputValidationMiddleware)
 
     # Request logging
     app.add_middleware(RequestLoggingMiddleware)
