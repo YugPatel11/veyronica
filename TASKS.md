@@ -23,18 +23,18 @@
 
 ### EPIC-02: Design System & Component Library
 
-- [ ] `EPIC-02-T01` — Design tokens: CSS custom properties + Tailwind theme (colours, type, spacing, radius, elevation, motion)
-- [ ] `EPIC-02-T02` — Typography setup: Source Serif 4, Inter, JetBrains Mono via next/font *(EPIC-01-T07)*
-- [ ] `EPIC-02-T03` — Install and configure shadcn/ui with custom theme *(EPIC-01-T07)*
-- [ ] `EPIC-02-T04` — Base components: Button, Badge, Card, Input, Select, Textarea, Tooltip, Dialog, Dropdown, Sheet *(T03)*
-- [ ] `EPIC-02-T05` — Data components: DataTable, StatCard, ProgressBar, Timeline *(T04)*
-- [ ] `EPIC-02-T06` — Status components: StatusBadge, RiskBadge, ConfidenceIndicator *(T04)*
-- [ ] `EPIC-02-T07` — Layout components: AppShell, CommandPalette (Ctrl+K), CopilotSheet *(T04)*
-- [ ] `EPIC-02-T08` — Feedback components: Toast, Skeleton, EmptyState, ErrorBoundary *(T04)*
+- [x] `EPIC-02-T01` — Design tokens: CSS custom properties + Tailwind theme (colours, type, spacing, radius, elevation, motion)
+- [x] `EPIC-02-T02` — Typography setup: Source Serif 4, Inter, JetBrains Mono via next/font *(EPIC-01-T07)*
+- [x] `EPIC-02-T03` — Install and configure shadcn/ui with custom theme *(EPIC-01-T07)*
+- [x] `EPIC-02-T04` — Base components: Button, Badge, Card, Input, Select, Textarea, Tooltip, Dialog, Dropdown, Sheet *(T03)*
+- [x] `EPIC-02-T05` — Data components: DataTable, StatCard, ProgressBar, Timeline *(T04)*
+- [x] `EPIC-02-T06` — Status components: StatusBadge, RiskBadge, ConfidenceIndicator *(T04)*
+- [x] `EPIC-02-T07` — Layout components: AppShell, CommandPalette (Ctrl+K), CopilotSheet *(T04)*
+- [x] `EPIC-02-T08` — Feedback components: Toast, Skeleton, EmptyState, ErrorBoundary *(T04)*
 - [ ] `EPIC-02-T09` — Storybook setup with all components documented *(T04–T08)*
 - [ ] `EPIC-02-T10` — Visual regression testing (Chromatic or Percy) *(T09)*
 - [ ] `EPIC-02-T11` — Accessibility audit: axe-core + keyboard nav for all components *(T04–T08)*
-- [ ] `EPIC-02-T12` — Icon set (Lucide) and illustration style guide *(T01)*
+- [x] `EPIC-02-T12` — Icon set (Lucide) and illustration style guide *(T01)*
 - [ ] `EPIC-02-T13` — Chart theme (Recharts) matching design system *(T01)*
 
 ### EPIC-03: Database & Data Layer
@@ -56,16 +56,16 @@
 
 ### EPIC-04: Auth, RBAC & Security Baseline
 
-- [ ] `EPIC-04-T01` — JWT auth with access + refresh token rotation, Argon2 hashing *(EPIC-03-T01)*
-- [ ] `EPIC-04-T02` — RBAC middleware with role-permission matrix *(T01)*
-- [ ] `EPIC-04-T03` — MFA (TOTP) for admin and approver roles *(T01)*
-- [ ] `EPIC-04-T04` — Redis-backed token blacklist for logout/revocation *(T01, EPIC-01-T02)*
-- [ ] `EPIC-04-T05` — Rate limiting middleware (Redis token bucket) *(EPIC-01-T02)*
-- [ ] `EPIC-04-T06` — Security headers middleware (HSTS, CSP, X-Frame-Options) *(EPIC-01-T03)*
-- [ ] `EPIC-04-T07` — CORS configuration (explicit origins) *(EPIC-01-T03)*
-- [ ] `EPIC-04-T08` — Secrets management (.env validation) *(EPIC-01-T10)*
-- [ ] `EPIC-04-T09` — Account lockout after 5 failed logins (15 min cooldown) *(T01, EPIC-03-T08)*
-- [ ] `EPIC-04-T10` — Input validation middleware (size limits, content-type) *(EPIC-01-T03)*
+- [x] `EPIC-04-T01` — JWT auth with access + refresh token rotation, Argon2 hashing *(EPIC-03-T01)*
+- [x] `EPIC-04-T02` — RBAC middleware with role-permission matrix *(T01)*
+- [x] `EPIC-04-T03` — MFA (TOTP) for admin and approver roles *(T01)*
+- [x] `EPIC-04-T04` — Redis-backed token blacklist for logout/revocation *(T01, EPIC-01-T02)*
+- [x] `EPIC-04-T05` — Rate limiting middleware (Redis token bucket) *(EPIC-01-T02)*
+- [x] `EPIC-04-T06` — Security headers middleware (HSTS, CSP, X-Frame-Options) *(EPIC-01-T03)*
+- [x] `EPIC-04-T07` — CORS configuration (explicit origins) *(EPIC-01-T03)*
+- [x] `EPIC-04-T08` — Secrets management (.env validation) *(EPIC-01-T10)*
+- [x] `EPIC-04-T09` — Account lockout after 5 failed logins (15 min cooldown) *(T01, EPIC-03-T08)*
+- [x] `EPIC-04-T10` — Input validation middleware (size limits, content-type) *(EPIC-01-T03)*
 
 ---
 
