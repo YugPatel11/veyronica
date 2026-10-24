@@ -84,12 +84,22 @@ def create_app() -> FastAPI:
     # Register routers
     from app.api.v1.auth import router as auth_router
     from app.api.v1.health import router as health_router
+    from app.api.v1.connectors import router as connectors_router
+    from app.api.v1.workflows import router as workflows_router
+    from app.api.v1.approvals import router as approvals_router
+    from app.api.v1.audit import router as audit_router
+    from app.api.v1.events import router as events_router
 
     # Health endpoints at root (no prefix) for orchestrators
     app.include_router(health_router)
 
     # API v1 routes
     app.include_router(auth_router, prefix=settings.api_prefix)
+    app.include_router(connectors_router, prefix=settings.api_prefix)
+    app.include_router(workflows_router, prefix=settings.api_prefix)
+    app.include_router(approvals_router, prefix=settings.api_prefix)
+    app.include_router(audit_router, prefix=settings.api_prefix)
+    app.include_router(events_router, prefix=settings.api_prefix)
 
     return app
 
