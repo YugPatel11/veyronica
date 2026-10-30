@@ -49,11 +49,11 @@
 ---
 
 ## Batch 5: WF2 — Assignment Cycle
-- [ ] 25. `EPIC-16-T01` Assignment Agent: submission classification (on-time/late) | Files: `backend/app/workflow/assignment/classifier.py` | Deps: none | Risk: Med
-- [ ] 26. `EPIC-16-T02` Webhook-triggered flow (assignment.submitted) | Files: `backend/app/workflow/assignment/webhook.py` | Deps: 25 | Risk: Med
-- [ ] 27. `EPIC-16-T03` Marks sync to ERP via connector | Files: `backend/app/workflow/assignment/erp_sync.py` | Deps: 25 | Risk: Med
-- [ ] 28. `EPIC-16-T04` Scheduled overdue detection (Celery Beat) | Files: `backend/app/workflow/assignment/overdue_detector.py` | Deps: none | Risk: Med
-- [ ] 29. `EPIC-16-T05` Parent notification flow with policy check | Files: `backend/app/workflow/assignment/parent_notification.py` | Deps: 28 | Risk: Low
+- [x] 25. `EPIC-16-T01` Assignment Agent: submission classification (on-time/late) | DONE: assignment/classifier.py
+- [x] 26. `EPIC-16-T02` Webhook-triggered flow (assignment.submitted) | DONE: assignment/webhook.py
+- [x] 27. `EPIC-16-T03` Marks sync to ERP via connector | DONE: assignment/erp_sync.py
+- [x] 28. `EPIC-16-T04` Scheduled overdue detection (Celery Beat) | DONE: assignment/overdue_detector.py
+- [x] 29. `EPIC-16-T05` Parent notification flow with policy check | DONE: assignment/parent_notification.py
 
 ---
 

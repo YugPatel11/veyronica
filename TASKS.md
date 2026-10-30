@@ -226,11 +226,11 @@
 
 ### EPIC-16: WF2 — Assignment Cycle
 
-- [ ] `EPIC-16-T01` — Assignment Agent: submission classification (on-time/late) *(EPIC-06)*
-- [ ] `EPIC-16-T02` — Webhook-triggered flow (assignment.submitted) *(EPIC-11-T04)*
-- [ ] `EPIC-16-T03` — Marks sync to ERP via connector *(EPIC-05-T07)*
-- [ ] `EPIC-16-T04` — Scheduled overdue detection (Celery Beat) *(EPIC-07-T10)*
-- [ ] `EPIC-16-T05` — Parent notification flow with policy check *(EPIC-08, EPIC-21)*
+- [x] `EPIC-16-T01` — Assignment Agent: submission classification (on-time/late) *(EPIC-06)*
+- [x] `EPIC-16-T02` — Webhook-triggered flow (assignment.submitted) *(EPIC-11-T04)*
+- [x] `EPIC-16-T03` — Marks sync to ERP via connector *(EPIC-05-T07)*
+- [x] `EPIC-16-T04` — Scheduled overdue detection (Celery Beat) *(EPIC-07-T10)*
+- [x] `EPIC-16-T05` — Parent notification flow with policy check *(EPIC-08, EPIC-21)*
 - [x] `EPIC-16-T06` — Assignment dashboard UI page *(EPIC-12)*
 
 ### EPIC-17: WF3 — Admin Copilot
