@@ -54,3 +54,8 @@ designpowers/
 *.pem
 *.key
 *.p12
+
+# Backups & local databases
+backups/
+*.db
+

@@ -73,7 +73,11 @@ const statusConfig: Record<
 };
 
 export function StatusBadge({ status, label, className }: StatusBadgeProps) {
-  const config = statusConfig[status];
+  const config = statusConfig[status] || {
+    icon: Clock,
+    label: String(status),
+    className: "bg-[var(--color-surface-sunken)] text-[var(--color-ink-muted)]",
+  };
   const Icon = config.icon;
 
   return (
