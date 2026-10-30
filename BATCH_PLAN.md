@@ -100,11 +100,11 @@
 ---
 
 ## Batch 10: Documentation
-- [ ] 56. `DOC-01` Architecture Decision Records (see docs/adr/) | Files: `docs/adr/ADR-001-to-010.md` | Deps: none | Risk: Low
-- [ ] 57. `DOC-02` API documentation (FastAPI auto-docs + examples) | Files: `docs/api/API_REFERENCE.md` | Deps: none | Risk: Low
-- [ ] 58. `DOC-03` Runbooks (10 operational procedures) | Files: `docs/runbooks/RUNBOOKS.md` | Deps: none | Risk: Low
-- [ ] 59. `DOC-04` Onboarding guide (developer setup in < 30 min) | Files: `docs/onboarding/DEVELOPER_SETUP.md` | Deps: none | Risk: Low
-- [ ] 60. `DOC-05` Design system documentation (Storybook + DESIGN.md) | Files: `docs/design/DESIGN_SYSTEM.md` | Deps: none | Risk: Low
+- [x] 56. `DOC-01` Architecture Decision Records (see docs/adr/) | DONE: docs/adr/README.md & ADR-011-013
+- [x] 57. `DOC-02` API documentation (FastAPI auto-docs + examples) | DONE: docs/api/API_REFERENCE.md
+- [x] 58. `DOC-03` Runbooks (10 operational procedures) | DONE: docs/runbooks/RUNBOOKS.md
+- [x] 59. `DOC-04` Onboarding guide (developer setup in < 30 min) | DONE: docs/onboarding/DEVELOPER_SETUP.md
+- [x] 60. `DOC-05` Design system documentation (Storybook + DESIGN.md) | DONE: docs/design/DESIGN_SYSTEM.md
 
 ---
 

@@ -347,11 +347,11 @@
 
 ### Documentation
 
-- [ ] `DOC-01` — Architecture Decision Records (see docs/adr/)
-- [ ] `DOC-02` — API documentation (FastAPI auto-docs + examples)
-- [ ] `DOC-03` — Runbooks (10 operational procedures)
-- [ ] `DOC-04` — Onboarding guide (developer setup in < 30 min)
-- [ ] `DOC-05` — Design system documentation (Storybook + DESIGN.md)
+- [x] `DOC-01` — Architecture Decision Records (see docs/adr/)
+- [x] `DOC-02` — API documentation (FastAPI auto-docs + examples)
+- [x] `DOC-03` — Runbooks (10 operational procedures)
+- [x] `DOC-04` — Onboarding guide (developer setup in < 30 min)
+- [x] `DOC-05` — Design system documentation (Storybook + DESIGN.md)
 
 ### Testing Milestones
 
