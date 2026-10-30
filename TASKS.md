@@ -306,11 +306,11 @@
 
 ### EPIC-25: Performance & Load Testing
 
-- [ ] `EPIC-25-T01` — Locust load test suite (API endpoints, concurrent workflows) *(EPIC-01-T03)*
-- [ ] `EPIC-25-T02` — Database query optimisation (slow query log, index tuning) *(EPIC-03-T14)*
-- [ ] `EPIC-25-T03` — API performance profiling (middleware latency) *(T01)*
-- [ ] `EPIC-25-T04` — Caching strategy review (Redis TTLs, cache invalidation) *(EPIC-06-T03)*
-- [ ] `EPIC-25-T05` — Load test targets verification: 500 rps, 50 concurrent runs, p95 < 200ms *(T01–T04)*
+- [x] `EPIC-25-T01` — Locust load test suite (API endpoints, concurrent workflows) *(EPIC-01-T03)*
+- [x] `EPIC-25-T02` — Database query optimisation (slow query log, index tuning) *(EPIC-03-T14)*
+- [x] `EPIC-25-T03` — API performance profiling (middleware latency) *(T01)*
+- [x] `EPIC-25-T04` — Caching strategy review (Redis TTLs, cache invalidation) *(EPIC-06-T03)*
+- [x] `EPIC-25-T05` — Load test targets verification: 500 rps, 50 concurrent runs, p95 < 200ms *(T01–T04)*
 
 ### EPIC-28: Sandbox/Demo Tooling
 

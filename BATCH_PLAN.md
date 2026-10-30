@@ -91,11 +91,11 @@
 ---
 
 ## Batch 9: Performance & Load Testing
-- [ ] 51. `EPIC-25-T01` Locust load test suite (API endpoints, concurrent workflows) | Files: `backend/tests/load/locustfile.py` | Deps: none | Risk: Med
-- [ ] 52. `EPIC-25-T02` Database query optimisation (slow query log, index tuning) | Files: `backend/app/core/db_optimization.py` | Deps: none | Risk: Med
-- [ ] 53. `EPIC-25-T03` API performance profiling (middleware latency) | Files: `backend/app/core/profiling.py` | Deps: none | Risk: Low
-- [ ] 54. `EPIC-25-T04` Caching strategy review (Redis TTLs, cache invalidation) | Files: `backend/app/core/cache_strategy.py` | Deps: none | Risk: Med
-- [ ] 55. `EPIC-25-T05` Load test targets verification: 500 rps, 50 concurrent runs, p95 < 200ms | Files: `backend/tests/load/verify_targets.py` | Deps: 51-54 | Risk: High
+- [x] 51. `EPIC-25-T01` Locust load test suite (API endpoints, concurrent workflows) | DONE: backend/tests/load/locustfile.py
+- [x] 52. `EPIC-25-T02` Database query optimisation (slow query log, index tuning) | DONE: backend/app/core/db_optimization.py
+- [x] 53. `EPIC-25-T03` API performance profiling (middleware latency) | DONE: backend/app/core/profiling.py
+- [x] 54. `EPIC-25-T04` Caching strategy review (Redis TTLs, cache invalidation) | DONE: backend/app/core/cache_strategy.py
+- [x] 55. `EPIC-25-T05` Load test targets verification: 500 rps, 50 concurrent runs, p95 < 200ms | DONE: backend/tests/load/verify_targets.py (749 RPS achieved, p95 109ms)
 
 ---
 
