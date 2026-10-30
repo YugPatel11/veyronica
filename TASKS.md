@@ -287,22 +287,22 @@
 
 - [x] `EPIC-23-T01` — OpenTelemetry instrumentation (FastAPI, Celery, connectors) *(EPIC-01-T03)*
 - [x] `EPIC-23-T02` — Prometheus-compatible metrics export *(T01)*
-- [ ] `EPIC-23-T03` — Grafana dashboards: API health, workflow ops, LLM cost, connectors *(T02)*
-- [ ] `EPIC-23-T04` — Alerting rules (error rate, stuck runs, ledger integrity, budget) *(T03)*
-- [ ] `EPIC-23-T05` — SLO definitions with burn-rate alerts *(T04)*
+- [x] `EPIC-23-T03` — Grafana dashboards: API health, workflow ops, LLM cost, connectors *(T02)*
+- [x] `EPIC-23-T04` — Alerting rules (error rate, stuck runs, ledger integrity, budget) *(T03)*
+- [x] `EPIC-23-T05` — SLO definitions with burn-rate alerts *(T04)*
 - [x] `EPIC-23-T06` — Health check aggregation endpoint *(T01)*
 - [x] `EPIC-23-T07` — Structured JSON log format with correlation IDs *(EPIC-01-T03)*
-- [ ] `EPIC-23-T08` — LLM cost and latency monitoring dashboard *(T03)*
+- [x] `EPIC-23-T08` — LLM cost and latency monitoring dashboard *(T03)*
 
 ### EPIC-24: Security Hardening
 
-- [ ] `EPIC-24-T01` — Dependency scanning (Snyk or Trivy) in CI *(EPIC-01-T09)*
-- [ ] `EPIC-24-T02` — Container image scanning *(T01)*
+- [x] `EPIC-24-T01` — Dependency scanning (Snyk or Trivy) in CI *(EPIC-01-T09)*
+- [x] `EPIC-24-T02` — Container image scanning *(T01)*
 - [x] `EPIC-24-T03` — CSRF protection for state-changing requests *(EPIC-04-T06)*
 - [x] `EPIC-24-T04` — Webhook request signing (outbound) *(EPIC-11-T04)*
 - [x] `EPIC-24-T05` — Data retention policies and automated cleanup job *(EPIC-03)*
 - [x] `EPIC-24-T06` — Consent management for student data (parent notifications) *(EPIC-03-T01)*
-- [ ] `EPIC-24-T07` — Security audit checklist (OWASP ASVS Level 2) *(T01–T06)*
+- [x] `EPIC-24-T07` — Security audit checklist (OWASP ASVS Level 2) *(T01–T06)*
 
 ### EPIC-25: Performance & Load Testing
 

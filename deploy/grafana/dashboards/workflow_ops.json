@@ -1,0 +1,130 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "id": 1,
+      "title": "Active Workflow Executions",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(nexus_active_workflows)",
+          "legendFormat": "Active Runs",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 0 },
+      "id": 2,
+      "title": "Workflow Success Rate",
+      "type": "gauge",
+      "targets": [
+        {
+          "expr": "sum(rate(nexus_workflow_runs_total{status=\"completed\"}[1h])) / sum(rate(nexus_workflow_runs_total[1h])) * 100",
+          "legendFormat": "Success %",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "yellow", "value": 98 },
+              { "color": "green", "value": 99.5 }
+            ]
+          },
+          "unit": "percent"
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 0 },
+      "id": 3,
+      "title": "Pending Human Approvals",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "nexus_pending_approvals_total",
+          "legendFormat": "Pending",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 18, "y": 0 },
+      "id": 4,
+      "title": "Stuck / Timed-out Runs",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "nexus_stuck_workflows_count",
+          "legendFormat": "Stuck (>15m)",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "id": 5,
+      "title": "Workflow Invocations by Type (Exam, Assignment, Timetable, Question Paper)",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by (workflow_name) (rate(nexus_workflow_runs_total[5m]))",
+          "legendFormat": "{{workflow_name}}",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "id": 6,
+      "title": "Workflow Execution Duration (p50, p95)",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, sum(rate(nexus_workflow_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "Median Duration (s)",
+          "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(nexus_workflow_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p95 Duration (s)",
+          "refId": "B"
+        }
+      ]
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["nexus", "workflows", "operations"],
+  "time": { "from": "now-3h", "to": "now" },
+  "title": "Nexus — Workflow Operations & Execution Engine",
+  "uid": "nexus-workflow-ops"
+}

@@ -1,0 +1,68 @@
+groups:
+  - name: nexus_system_alerts
+    rules:
+      - alert: HighHttpErrorRate
+        expr: (sum(rate(nexus_http_requests_total{status=~"5.."}[5m])) / sum(rate(nexus_http_requests_total[5m]))) * 100 > 1.0
+        for: 2m
+        labels:
+          severity: critical
+          component: api
+        annotations:
+          summary: "High HTTP 5xx error rate detected: {{ $value | printf \"%.2f\" }}%"
+          description: "API server 5xx error rate exceeds 1.0% threshold over 5-minute evaluation window."
+          runbook_url: "https://docs.nexus.internal/runbooks/api_5xx_errors"
+
+      - alert: HighApiLatency
+        expr: histogram_quantile(0.95, sum(rate(nexus_http_request_duration_seconds_bucket[5m])) by (le)) * 1000 > 300
+        for: 3m
+        labels:
+          severity: warning
+          component: api
+        annotations:
+          summary: "API p95 latency high: {{ $value | printf \"%.0f\" }}ms"
+          description: "95th percentile request latency exceeds 300ms SLA target."
+          runbook_url: "https://docs.nexus.internal/runbooks/api_latency_spike"
+
+      - alert: StuckWorkflowRun
+        expr: nexus_stuck_workflows_count > 0
+        for: 5m
+        labels:
+          severity: critical
+          component: workflow_engine
+        annotations:
+          summary: "{{ $value }} workflow(s) stuck in running state > 15 minutes"
+          description: "Workflow orchestration task has stalled or worker process timed out without emitting terminal state."
+          runbook_url: "https://docs.nexus.internal/runbooks/stuck_workflows"
+
+      - alert: LedgerIntegrityMismatch
+        expr: nexus_ledger_integrity_valid == 0
+        for: 0m
+        labels:
+          severity: critical
+          component: decision_ledger
+        annotations:
+          summary: "Cryptographic hash chain verification failed in Decision Ledger"
+          description: "Tamper detection detected hash mismatch in audit block sequence. Immediate forensics required."
+          runbook_url: "https://docs.nexus.internal/runbooks/ledger_tamper"
+
+      - alert: LLMBudgetExceeded
+        expr: (nexus_llm_cost_usd_total / nexus_llm_monthly_budget_usd) * 100 > 90.0
+        for: 5m
+        labels:
+          severity: critical
+          component: llm_gateway
+        annotations:
+          summary: "LLM monthly expenditure exceeded 90% quota (current: {{ $value | printf \"%.1f\" }}%)"
+          description: "Token spend threshold breached. Downgrading non-critical agents to Tier 1 local model."
+          runbook_url: "https://docs.nexus.internal/runbooks/llm_cost_containment"
+
+      - alert: ConnectorCircuitOpen
+        expr: sum(nexus_circuit_breaker_open_total) > 0
+        for: 1m
+        labels:
+          severity: warning
+          component: connectors
+        annotations:
+          summary: "External connector circuit breaker tripped: {{ $labels.connector }}"
+          description: "Connector to third-party ERP/LMS/CRM failed consecutively and is rejecting outbound calls."
+          runbook_url: "https://docs.nexus.internal/runbooks/circuit_breaker"

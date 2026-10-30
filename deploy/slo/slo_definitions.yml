@@ -1,0 +1,73 @@
+version: "1.0"
+service: "nexus-core"
+description: "Service Level Objectives (SLOs) and Multi-Window Multi-Burn-Rate Alerts"
+
+slos:
+  - id: "slo_api_availability"
+    name: "API Availability"
+    description: "Proportion of successful HTTP requests (non-5xx)"
+    target: 0.999  # 99.9% availability
+    window: "30d"
+    error_budget: 0.001  # 0.1%
+    sli:
+      indicator: "nexus_http_requests_total"
+      good_query: 'sum(rate(nexus_http_requests_total{status!~"5.."}[{{.window}}]))'
+      total_query: 'sum(rate(nexus_http_requests_total[{{.window}}]))'
+    burn_rate_alerts:
+      - name: "ApiAvailabilityFastBurn"
+        severity: "critical"
+        short_window: "5m"
+        long_window: "1h"
+        burn_rate_threshold: 14.4
+        budget_consumed_percent: 2.0
+        notification_channels: ["pagerduty", "telegram_urgent", "slack_p0"]
+        description: "14.4x burn rate over 1h consumes 2% of 30d budget in 1 hour. Immediate response required."
+
+      - name: "ApiAvailabilitySlowBurn"
+        severity: "warning"
+        short_window: "30m"
+        long_window: "6h"
+        burn_rate_threshold: 6.0
+        budget_consumed_percent: 5.0
+        notification_channels: ["email", "slack_ops"]
+        description: "6.0x burn rate over 6h consumes 5% of 30d budget in 6 hours."
+
+  - id: "slo_api_latency"
+    name: "API Request Latency"
+    description: "Proportion of HTTP requests served in under 200ms"
+    target: 0.950  # 95% < 200ms
+    window: "30d"
+    error_budget: 0.050  # 5.0%
+    sli:
+      indicator: "nexus_http_request_duration_seconds_bucket"
+      good_query: 'sum(rate(nexus_http_request_duration_seconds_bucket{le="0.2"}[{{.window}}]))'
+      total_query: 'sum(rate(nexus_http_request_duration_seconds_count[{{.window}}]))'
+    burn_rate_alerts:
+      - name: "ApiLatencyFastBurn"
+        severity: "warning"
+        short_window: "15m"
+        long_window: "2h"
+        burn_rate_threshold: 10.0
+        budget_consumed_percent: 3.5
+        notification_channels: ["slack_ops", "email"]
+        description: "Latency SLA breached by > 10x burn rate."
+
+  - id: "slo_workflow_success"
+    name: "Workflow Completion Success"
+    description: "Proportion of initiated workflows completing in successful state"
+    target: 0.995  # 99.5% completion
+    window: "30d"
+    error_budget: 0.005  # 0.5%
+    sli:
+      indicator: "nexus_workflow_runs_total"
+      good_query: 'sum(rate(nexus_workflow_runs_total{status="completed"}[{{.window}}]))'
+      total_query: 'sum(rate(nexus_workflow_runs_total[{{.window}}]))'
+    burn_rate_alerts:
+      - name: "WorkflowCompletionFastBurn"
+        severity: "critical"
+        short_window: "10m"
+        long_window: "1h"
+        burn_rate_threshold: 14.4
+        budget_consumed_percent: 2.0
+        notification_channels: ["telegram_urgent", "slack_p0"]
+        description: "Workflow orchestration failure rate spiking across agents."

@@ -1,0 +1,136 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "id": 1,
+      "title": "ERP Connector Health",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "nexus_connector_health{connector=\"erp\"}",
+          "legendFormat": "ERP Status",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "0": { "color": "red", "text": "DOWN" }, "1": { "color": "green", "text": "HEALTHY" } }, "type": "value" }
+          ]
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 0 },
+      "id": 2,
+      "title": "LMS Connector Health",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "nexus_connector_health{connector=\"lms\"}",
+          "legendFormat": "LMS Status",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "0": { "color": "red", "text": "DOWN" }, "1": { "color": "green", "text": "HEALTHY" } }, "type": "value" }
+          ]
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 0 },
+      "id": 3,
+      "title": "CRM Connector Health",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "nexus_connector_health{connector=\"crm\"}",
+          "legendFormat": "CRM Status",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "0": { "color": "red", "text": "DOWN" }, "1": { "color": "green", "text": "HEALTHY" } }, "type": "value" }
+          ]
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 4, "w": 6, "x": 18, "y": 0 },
+      "id": 4,
+      "title": "Circuit Breakers Open",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(nexus_circuit_breaker_open_total)",
+          "legendFormat": "Open Circuits",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "id": 5,
+      "title": "Connector Call Volume & Error Rates",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum by (connector) (rate(nexus_connector_calls_total[2m]))",
+          "legendFormat": "{{connector}} calls/sec",
+          "refId": "A"
+        },
+        {
+          "expr": "sum by (connector) (rate(nexus_connector_errors_total[2m]))",
+          "legendFormat": "{{connector}} errors/sec",
+          "refId": "B"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "id": 6,
+      "title": "Outbound Connector Latency (p95 ms)",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by (connector, le) (rate(nexus_connector_duration_seconds_bucket[5m]))) * 1000",
+          "legendFormat": "{{connector}} p95 ms",
+          "refId": "A"
+        }
+      ]
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["nexus", "connectors", "integrations"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "Nexus — Connector Health & Circuit Breakers",
+  "uid": "nexus-connectors"
+}

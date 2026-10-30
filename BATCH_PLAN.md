@@ -80,13 +80,13 @@
 ---
 
 ## Batch 8: Observability & Security Hardening
-- [ ] 44. `EPIC-23-T03` Grafana dashboards: API health, workflow ops, LLM cost, connectors | Files: `deploy/grafana/dashboards/*.json` | Deps: none | Risk: Low
-- [ ] 45. `EPIC-23-T04` Alerting rules (error rate, stuck runs, ledger integrity, budget) | Files: `deploy/prometheus/alerts.yml` | Deps: 44 | Risk: Low
-- [ ] 46. `EPIC-23-T05` SLO definitions with burn-rate alerts | Files: `deploy/slo/slo_definitions.yml` | Deps: 45 | Risk: Low
-- [ ] 47. `EPIC-23-T08` LLM cost and latency monitoring dashboard | Files: `deploy/grafana/dashboards/llm_cost_latency.json` | Deps: 44 | Risk: Low
-- [ ] 48. `EPIC-24-T01` Dependency scanning (Snyk or Trivy) in CI | Files: `.github/workflows/security-scan.yml` | Deps: none | Risk: Low
-- [ ] 49. `EPIC-24-T02` Container image scanning | Files: `.github/workflows/container-scan.yml`, `scripts/scan_containers.sh` | Deps: 48 | Risk: Low
-- [ ] 50. `EPIC-24-T07` Security audit checklist (OWASP ASVS Level 2) | Files: `docs/security/OWASP_ASVS_LEVEL2_AUDIT.md` | Deps: none | Risk: Low
+- [x] 44. `EPIC-23-T03` Grafana dashboards: API health, workflow ops, LLM cost, connectors | DONE: deploy/grafana/dashboards/*.json
+- [x] 45. `EPIC-23-T04` Alerting rules (error rate, stuck runs, ledger integrity, budget) | DONE: deploy/prometheus/alerts.yml
+- [x] 46. `EPIC-23-T05` SLO definitions with burn-rate alerts | DONE: deploy/slo/slo_definitions.yml
+- [x] 47. `EPIC-23-T08` LLM cost and latency monitoring dashboard | DONE: deploy/grafana/dashboards/llm_cost_latency.json
+- [x] 48. `EPIC-24-T01` Dependency scanning (Snyk or Trivy) in CI | DONE: .github/workflows/security-scan.yml
+- [x] 49. `EPIC-24-T02` Container image scanning | DONE: .github/workflows/container-scan.yml, scripts/scan_containers.sh
+- [x] 50. `EPIC-24-T07` Security audit checklist (OWASP ASVS Level 2) | DONE: docs/security/OWASP_ASVS_LEVEL2_AUDIT.md
 
 ---
 
