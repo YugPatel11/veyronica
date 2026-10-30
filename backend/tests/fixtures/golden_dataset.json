@@ -1,0 +1,752 @@
+[
+  {
+    "id": "golden_001",
+    "student_roll": "CS2026-1001",
+    "student_name": "Aarav Sharma",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1001\nName: Aarav Sharma\nExam: CS301-Algorithms\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_002",
+    "student_roll": "CS2026-1002",
+    "student_name": "Vivaan Patel",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1002\nName: Vivaan Patel\nExam: CS302-Database-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_003",
+    "student_roll": "CS2026-1003",
+    "student_name": "Aditya Verma",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1003\nName: Aditya Verma\nExam: CS303-Operating-Systems\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_004",
+    "student_roll": "CS2026-1004",
+    "student_name": "Vihaan Reddy",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1004\nName: Vihaan Reddy\nExam: CS304-Computer-Networks\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_005",
+    "student_roll": "CS2026-1005",
+    "student_name": "Arjun Nair",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1005\nName: Arjun Nair\nExam: CS301-Algorithms\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_006",
+    "student_roll": "CS2026-1006",
+    "student_name": "Sai Kumar",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1006\nName: Sai Kumar\nExam: CS302-Database-Systems\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_007",
+    "student_roll": "CS2026-1007",
+    "student_name": "Reyansh Gupta",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1007\nName: Reyansh Gupta\nExam: CS303-Operating-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_008",
+    "student_roll": "CS2026-1008",
+    "student_name": "Ayaan Joshi",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1008\nName: Ayaan Joshi\nExam: CS304-Computer-Networks\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_009",
+    "student_roll": "CS2026-1009",
+    "student_name": "Krishna Iyer",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1009\nName: Krishna Iyer\nExam: CS301-Algorithms\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_010",
+    "student_roll": "CS2026-1010",
+    "student_name": "Ishaan Malhotra",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1010\nName: Ishaan Malhotra\nExam: CS302-Database-Systems\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_011",
+    "student_roll": "CS2026-1011",
+    "student_name": "Ananya Sen",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1011\nName: Ananya Sen\nExam: CS303-Operating-Systems\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_012",
+    "student_roll": "CS2026-1012",
+    "student_name": "Diya Bhat",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1012\nName: Diya Bhat\nExam: CS304-Computer-Networks\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_013",
+    "student_roll": "CS2026-1013",
+    "student_name": "Saanvi Rao",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1013\nName: Saanvi Rao\nExam: CS301-Algorithms\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_014",
+    "student_roll": "CS2026-1014",
+    "student_name": "Aadhya Deshmukh",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1014\nName: Aadhya Deshmukh\nExam: CS302-Database-Systems\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_015",
+    "student_roll": "CS2026-1015",
+    "student_name": "Kiara Mehta",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1015\nName: Kiara Mehta\nExam: CS303-Operating-Systems\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_016",
+    "student_roll": "CS2026-1016",
+    "student_name": "Pari Saxena",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1016\nName: Pari Saxena\nExam: CS304-Computer-Networks\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_017",
+    "student_roll": "CS2026-1017",
+    "student_name": "Avani Kulkarni",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1017\nName: Avani Kulkarni\nExam: CS301-Algorithms\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_018",
+    "student_roll": "CS2026-1018",
+    "student_name": "Myra Pillai",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1018\nName: Myra Pillai\nExam: CS302-Database-Systems\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_019",
+    "student_roll": "CS2026-1019",
+    "student_name": "Riya Chatterjee",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1019\nName: Riya Chatterjee\nExam: CS303-Operating-Systems\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_020",
+    "student_roll": "CS2026-1020",
+    "student_name": "Anika Menon",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1020\nName: Anika Menon\nExam: CS304-Computer-Networks\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_021",
+    "student_roll": "CS2026-1021",
+    "student_name": "Rohan Bose",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1021\nName: Rohan Bose\nExam: CS301-Algorithms\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_022",
+    "student_roll": "CS2026-1022",
+    "student_name": "Kabir Das",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1022\nName: Kabir Das\nExam: CS302-Database-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_023",
+    "student_roll": "CS2026-1023",
+    "student_name": "Dhruv Bhattacharya",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1023\nName: Dhruv Bhattacharya\nExam: CS303-Operating-Systems\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_024",
+    "student_roll": "CS2026-1024",
+    "student_name": "Devansh Hegde",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1024\nName: Devansh Hegde\nExam: CS304-Computer-Networks\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_025",
+    "student_roll": "CS2026-1025",
+    "student_name": "Atharv Pandey",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1025\nName: Atharv Pandey\nExam: CS301-Algorithms\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_026",
+    "student_roll": "CS2026-1026",
+    "student_name": "Pranav Mishra",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1026\nName: Pranav Mishra\nExam: CS302-Database-Systems\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_027",
+    "student_roll": "CS2026-1027",
+    "student_name": "Tanvi Agarwal",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1027\nName: Tanvi Agarwal\nExam: CS303-Operating-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_028",
+    "student_roll": "CS2026-1028",
+    "student_name": "Navya Ghosh",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1028\nName: Navya Ghosh\nExam: CS304-Computer-Networks\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_029",
+    "student_roll": "CS2026-1029",
+    "student_name": "Isha Mukherjee",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1029\nName: Isha Mukherjee\nExam: CS301-Algorithms\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_030",
+    "student_roll": "CS2026-1030",
+    "student_name": "Kavya Nambiar",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1030\nName: Kavya Nambiar\nExam: CS302-Database-Systems\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_031",
+    "student_roll": "CS2026-1031",
+    "student_name": "Rudra Tiwari",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1031\nName: Rudra Tiwari\nExam: CS303-Operating-Systems\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_032",
+    "student_roll": "CS2026-1032",
+    "student_name": "Omkar Yadav",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1032\nName: Omkar Yadav\nExam: CS304-Computer-Networks\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_033",
+    "student_roll": "CS2026-1033",
+    "student_name": "Siddharth Chauhan",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1033\nName: Siddharth Chauhan\nExam: CS301-Algorithms\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_034",
+    "student_roll": "CS2026-1034",
+    "student_name": "Yash Singhania",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1034\nName: Yash Singhania\nExam: CS302-Database-Systems\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_035",
+    "student_roll": "CS2026-1035",
+    "student_name": "Harsh Dubey",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1035\nName: Harsh Dubey\nExam: CS303-Operating-Systems\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_036",
+    "student_roll": "CS2026-1036",
+    "student_name": "Manish Kapoor",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1036\nName: Manish Kapoor\nExam: CS304-Computer-Networks\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_037",
+    "student_roll": "CS2026-1037",
+    "student_name": "Gaurav Sethi",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1037\nName: Gaurav Sethi\nExam: CS301-Algorithms\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_038",
+    "student_roll": "CS2026-1038",
+    "student_name": "Sneha Ganguly",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1038\nName: Sneha Ganguly\nExam: CS302-Database-Systems\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_039",
+    "student_roll": "CS2026-1039",
+    "student_name": "Pooja Chawla",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1039\nName: Pooja Chawla\nExam: CS303-Operating-Systems\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_040",
+    "student_roll": "CS2026-1040",
+    "student_name": "Meera Varma",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1040\nName: Meera Varma\nExam: CS304-Computer-Networks\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_041",
+    "student_roll": "CS2026-1041",
+    "student_name": "Alok Tripathi",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1041\nName: Alok Tripathi\nExam: CS301-Algorithms\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_042",
+    "student_roll": "CS2026-1042",
+    "student_name": "Shreya Banerjee",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1042\nName: Shreya Banerjee\nExam: CS302-Database-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_043",
+    "student_roll": "CS2026-1043",
+    "student_name": "Deepak Soni",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1043\nName: Deepak Soni\nExam: CS303-Operating-Systems\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_044",
+    "student_roll": "CS2026-1044",
+    "student_name": "Neha Kaul",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1044\nName: Neha Kaul\nExam: CS304-Computer-Networks\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_045",
+    "student_roll": "CS2026-1045",
+    "student_name": "Vikram Goswami",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1045\nName: Vikram Goswami\nExam: CS301-Algorithms\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  },
+  {
+    "id": "golden_046",
+    "student_roll": "CS2026-1046",
+    "student_name": "Rahul Mahajan",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1046\nName: Rahul Mahajan\nExam: CS302-Database-Systems\n\nQ1. A hash table uses a deterministic hash function mapping keys to array slots with O(1) expected time.\n\nQ2. QuickSort recursively partitions the subarray around a chosen pivot element with divide and conquer.",
+    "faculty_ground_truth": {
+      "q1_marks": 10.0,
+      "q2_marks": 10.0,
+      "total_marks": 20.0,
+      "max_marks": 20.0,
+      "percentage": 100.0,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_047",
+    "student_roll": "CS2026-1047",
+    "student_name": "Kiran Bedi",
+    "subject": "CS303-Operating-Systems",
+    "raw_ocr_text": "Roll: CS2026-1047\nName: Kiran Bedi\nExam: CS303-Operating-Systems\n\nQ1. Hash table maps keys using a hash function with fast average lookups and collision handling.\n\nQ2. QuickSort partitions elements around a pivot and sorts partitions recursively.",
+    "faculty_ground_truth": {
+      "q1_marks": 8.5,
+      "q2_marks": 9.0,
+      "total_marks": 17.5,
+      "max_marks": 20.0,
+      "percentage": 87.5,
+      "expected_risk": "low"
+    }
+  },
+  {
+    "id": "golden_048",
+    "student_roll": "CS2026-1048",
+    "student_name": "Anil Deshmukh",
+    "subject": "CS304-Computer-Networks",
+    "raw_ocr_text": "Roll: CS2026-1048\nName: Anil Deshmukh\nExam: CS304-Computer-Networks\n\nQ1. A hash table stores key-value pairs in buckets using hashing techniques.\n\nQ2. QuickSort is an algorithm dividing items based on a pivot point.",
+    "faculty_ground_truth": {
+      "q1_marks": 6.0,
+      "q2_marks": 6.5,
+      "total_marks": 12.5,
+      "max_marks": 20.0,
+      "percentage": 62.5,
+      "expected_risk": "medium"
+    }
+  },
+  {
+    "id": "golden_049",
+    "student_roll": "CS2026-1049",
+    "student_name": "Bhavna Lal",
+    "subject": "CS301-Algorithms",
+    "raw_ocr_text": "Roll: CS2026-1049\nName: Bhavna Lal\nExam: CS301-Algorithms\n\nQ1. Table that hashes things.\n\nQ2. Sorting by dividing into two halves.",
+    "faculty_ground_truth": {
+      "q1_marks": 4.0,
+      "q2_marks": 4.5,
+      "total_marks": 8.5,
+      "max_marks": 20.0,
+      "percentage": 42.5,
+      "expected_risk": "high"
+    }
+  },
+  {
+    "id": "golden_050",
+    "student_roll": "CS2026-1050",
+    "student_name": "Chirag Parekh",
+    "subject": "CS302-Database-Systems",
+    "raw_ocr_text": "Roll: CS2026-1050\nName: Chirag Parekh\nExam: CS302-Database-Systems\n\nQ1. Not sure, something with arrays.\n\nQ2. Sorts by comparing items.",
+    "faculty_ground_truth": {
+      "q1_marks": 1.0,
+      "q2_marks": 1.5,
+      "total_marks": 2.5,
+      "max_marks": 20.0,
+      "percentage": 12.5,
+      "expected_risk": "critical"
+    }
+  }
+]

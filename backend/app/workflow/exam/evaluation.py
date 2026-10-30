@@ -55,20 +55,28 @@ class EvaluationAgent:
         matched = []
         missing = []
 
+        concept_scores: list[float] = []
         for concept in rubric.key_concepts:
             c_low = concept.lower()
             stem = c_low[:-3] if c_low.endswith("ing") else (c_low[:-2] if c_low.endswith("ed") else c_low.rstrip("s"))
             if c_low in text_lower or (len(stem) >= 4 and stem in text_lower):
                 matched.append(concept)
+                concept_scores.append(1.0)
             else:
-                missing.append(concept)
+                words = [w for w in c_low.split() if len(w) > 3]
+                matched_words = [w for w in words if w in text_lower or (len(w) > 5 and w[:4] in text_lower)]
+                if words and len(matched_words) > 0:
+                    matched.append(concept)
+                    concept_scores.append(len(matched_words) / len(words))
+                else:
+                    missing.append(concept)
+                    concept_scores.append(0.0)
 
         total_concepts = len(rubric.key_concepts)
         if total_concepts > 0:
-            match_ratio = len(matched) / total_concepts
+            match_ratio = sum(concept_scores) / total_concepts
             marks = round(match_ratio * rubric.max_marks, 1)
         else:
-            # Fallback if no specific concepts
             marks = rubric.max_marks if len(answer.extracted_text) > 10 else 0.0
             match_ratio = 1.0 if marks > 0 else 0.0
 

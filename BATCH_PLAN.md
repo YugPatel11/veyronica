@@ -40,11 +40,11 @@
 ---
 
 ## Batch 4: WF1 Analysis, Integration & Evaluation Suite
-- [ ] 20. `EPIC-15-T06` Analysis Agent: performance trends, risk scoring | Files: `backend/app/workflow/exam/analysis.py` | Deps: 19 | Risk: Med
-- [ ] 21. `EPIC-15-T07` Communication Agent: parent email drafting | Files: `backend/app/workflow/exam/communication.py` | Deps: 20 | Risk: Low
-- [ ] 22. `EPIC-15-T08` End-to-end integration: upload -> ERP -> email -> CRM | Files: `backend/app/workflow/exam/pipeline.py`, `backend/app/api/v1/exam_workflow.py` | Deps: 15-21 | Risk: High
-- [ ] 23. `EPIC-15-T09` Golden dataset creation (50 answer sheets with faculty marks) | Files: `backend/tests/fixtures/golden_dataset.json` | Deps: none | Risk: Low
-- [ ] 24. `EPIC-15-T10` Prompt evaluation suite (accuracy, regression tests) | Files: `backend/tests/unit/test_exam_prompt_eval.py` | Deps: 23 | Risk: Med
+- [x] 20. `EPIC-15-T06` Analysis Agent: performance trends, risk scoring | DONE: exam/analysis.py
+- [x] 21. `EPIC-15-T07` Communication Agent: parent email drafting | DONE: exam/communication.py
+- [x] 22. `EPIC-15-T08` End-to-end integration: upload -> ERP -> email -> CRM | DONE: exam/pipeline.py, api/v1/exam_workflow.py
+- [x] 23. `EPIC-15-T09` Golden dataset creation (50 answer sheets with faculty marks) | DONE: fixtures/golden_dataset.json (50 sheets)
+- [x] 24. `EPIC-15-T10` Prompt evaluation suite (accuracy, regression tests) | DONE: test_exam_prompt_eval.py passing accuracy & correlation
 
 ---
 

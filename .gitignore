@@ -58,4 +58,6 @@ designpowers/
 # Backups & local databases
 backups/
 *.db
+storage/
+
 

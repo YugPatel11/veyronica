@@ -89,6 +89,9 @@ def create_app() -> FastAPI:
     from app.api.v1.approvals import router as approvals_router
     from app.api.v1.audit import router as audit_router
     from app.api.v1.events import router as events_router
+    from app.api.v1.sandbox import router as sandbox_router
+    from app.api.v1.advanced_workflows import router as advanced_workflows_router
+    from app.api.v1.exam_workflow import router as exam_workflow_router
 
     # Health endpoints at root (no prefix) for orchestrators
     app.include_router(health_router)
@@ -100,6 +103,9 @@ def create_app() -> FastAPI:
     app.include_router(approvals_router, prefix=settings.api_prefix)
     app.include_router(audit_router, prefix=settings.api_prefix)
     app.include_router(events_router, prefix=settings.api_prefix)
+    app.include_router(sandbox_router, prefix=settings.api_prefix)
+    app.include_router(advanced_workflows_router, prefix=settings.api_prefix)
+    app.include_router(exam_workflow_router, prefix=settings.api_prefix)
 
     return app
 

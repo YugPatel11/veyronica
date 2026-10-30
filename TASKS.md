@@ -216,11 +216,11 @@
 - [x] `EPIC-15-T03` — Evaluation Agent: marking against rubric with confidence *(EPIC-06)*
 - [x] `EPIC-15-T04` — Evaluation Agent: structured decision records *(T03)*
 - [x] `EPIC-15-T05` — Verifier: marks sum, range checks, confidence threshold *(EPIC-07-T05)*
-- [ ] `EPIC-15-T06` — Analysis Agent: performance trends, risk scoring *(EPIC-06)*
-- [ ] `EPIC-15-T07` — Communication Agent: parent email drafting *(EPIC-05-T10)*
-- [ ] `EPIC-15-T08` — End-to-end integration: upload → ERP → email → CRM *(T01–T07, EPIC-05, EPIC-08)*
-- [ ] `EPIC-15-T09` — Golden dataset creation (50 answer sheets with faculty marks) *(T03)*
-- [ ] `EPIC-15-T10` — Prompt evaluation suite (accuracy, regression tests) *(T09)*
+- [x] `EPIC-15-T06` — Analysis Agent: performance trends, risk scoring *(EPIC-06)*
+- [x] `EPIC-15-T07` — Communication Agent: parent email drafting *(EPIC-05-T10)*
+- [x] `EPIC-15-T08` — End-to-end integration: upload → ERP → email → CRM *(T01–T07, EPIC-05, EPIC-08)*
+- [x] `EPIC-15-T09` — Golden dataset creation (50 answer sheets with faculty marks) *(T03)*
+- [x] `EPIC-15-T10` — Prompt evaluation suite (accuracy, regression tests) *(T09)*
 - [x] `EPIC-15-T11` — Exam upload UI page *(EPIC-12)*
 - [x] `EPIC-15-T12` — Exam results review UI page *(EPIC-12)*
 
