@@ -65,6 +65,8 @@ async def retry_operation(
     func: Callable[..., Any],
     *args: Any,
     max_retries: int = MAX_RETRIES,
+    initial_wait: float = INITIAL_WAIT,
+    jitter: float = JITTER,
     **kwargs: Any,
 ) -> Any:
     """Execute a function with retry logic (imperative style)."""
@@ -76,8 +78,8 @@ async def retry_operation(
         except ConnectorRetryError as e:
             last_error = e
             if attempt <= max_retries:
-                wait = min(INITIAL_WAIT * (2 ** (attempt - 1)), MAX_WAIT)
-                wait += random.uniform(0, JITTER)
+                wait = min(initial_wait * (2 ** (attempt - 1)), MAX_WAIT)
+                wait += random.uniform(0, jitter)
                 logger.warning(
                     "connector_retry",
                     attempt=attempt,

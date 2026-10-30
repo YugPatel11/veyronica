@@ -26,18 +26,24 @@ async def blacklist_token(jti: str, exp: datetime) -> None:
     The key expires automatically when the token would have expired,
     so no cleanup is needed.
     """
-    r = await _get_redis()
     try:
-        ttl = max(int((exp - datetime.now(UTC)).total_seconds()), 1)
-        await r.setex(f"{_BLACKLIST_PREFIX}{jti}", ttl, "1")
-    finally:
-        await r.aclose()
+        r = await _get_redis()
+        try:
+            ttl = max(int((exp - datetime.now(UTC)).total_seconds()), 1)
+            await r.setex(f"{_BLACKLIST_PREFIX}{jti}", ttl, "1")
+        finally:
+            await r.aclose()
+    except Exception:
+        pass
 
 
 async def is_token_blacklisted(jti: str) -> bool:
     """Check if a token JTI has been blacklisted."""
-    r = await _get_redis()
     try:
-        return bool(await r.exists(f"{_BLACKLIST_PREFIX}{jti}"))
-    finally:
-        await r.aclose()
+        r = await _get_redis()
+        try:
+            return bool(await r.exists(f"{_BLACKLIST_PREFIX}{jti}"))
+        finally:
+            await r.aclose()
+    except Exception:
+        return False

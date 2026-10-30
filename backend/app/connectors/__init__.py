@@ -34,7 +34,7 @@ class ConnectorResult(BaseModel):
     """Standardised result from any connector operation."""
 
     success: bool
-    data: dict[str, Any] | None = None
+    data: Any = None
     error: str | None = None
     status_code: int | None = None
     latency_ms: int = 0

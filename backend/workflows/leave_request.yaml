@@ -1,0 +1,37 @@
+name: "Faculty & Staff Leave Request"
+slug: "leave-request"
+version: 1
+description: "Extensible HR workflow: check leave balance, evaluate department coverage, route for HOD approval, and update HR records"
+trigger: manual
+autonomy_default: supervised
+on_failure: escalate
+steps:
+  - name: "Check Leave Balance"
+    type: connector
+    connector: hr-system
+    operation: get_leave_balance
+    description: "Verify faculty available leave quota"
+
+  - name: "Coverage Impact Assessment"
+    type: agent
+    agent: analysis
+    model_tier: standard
+    description: "Analyze timetable impact and substitute teacher availability"
+
+  - name: "HOD Dual-Approval"
+    type: approval
+    approval_type: approval
+    risk_level: medium
+    description: "Department Head and Dean sign-off"
+
+  - name: "Apply Leave Record"
+    type: connector
+    connector: hr-system
+    operation: apply_leave
+    description: "Deduct quota and log approved leave in HR system"
+
+  - name: "Notify Faculty"
+    type: agent
+    agent: communication
+    model_tier: economy
+    description: "Send calendar confirmation to applicant"

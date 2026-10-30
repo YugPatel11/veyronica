@@ -112,7 +112,7 @@ class DecisionLedger:
         entry.entry_hash = compute_entry_hash(entry)
         self._entries.append(entry)
 
-        logger.info("ledger_entry_appended", seq=self._sequence, event=event_type, action=action)
+        logger.info("ledger_entry_appended", seq=self._sequence, entry_type=event_type, action=action)
         return entry
 
     def verify_chain(self) -> tuple[bool, int]:

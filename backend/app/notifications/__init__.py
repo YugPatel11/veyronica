@@ -64,9 +64,15 @@ class NotificationDispatcher:
         self._notifications: list[NotificationData] = []
         self._preferences: dict[str, dict[str, list[str]]] = {}
 
-    def set_preferences(self, user_id: str, prefs: dict[str, list[str]]) -> None:
+    def set_preferences(
+        self,
+        user_id: str,
+        preferences: dict[str, list[str]] | None = None,
+        *,
+        prefs: dict[str, list[str]] | None = None,
+    ) -> None:
         """EPIC-21-T04: Set user notification preferences."""
-        self._preferences[user_id] = prefs
+        self._preferences[user_id] = preferences or prefs or {}
 
     def get_channels(self, user_id: str, category: str) -> list[str]:
         """Get preferred channels for a user and category."""

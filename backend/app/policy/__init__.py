@@ -139,6 +139,15 @@ def evaluate_policy(
     return result
 
 
+def compute_diff_hash(before: dict[str, Any], after: dict[str, Any]) -> str:
+    """EPIC-08-T04: Compute deterministic SHA-256 hash of diff before/after."""
+    import hashlib
+    import json
+    data = {"before": before, "after": after}
+    canon = json.dumps(data, sort_keys=True, default=str)
+    return hashlib.sha256(canon.encode()).hexdigest()
+
+
 # ── Approval Request ─────────────────────────────────────────────────────────
 
 class ApprovalRequestData(BaseModel):
@@ -147,7 +156,7 @@ class ApprovalRequestData(BaseModel):
     run_id: str
     task_id: str
     approval_type: str  # approval, dual_approval, notify
-    risk_level: str
+    risk_level: str = "medium"
     title: str
     description: str = ""
     diff_hash: str | None = None
@@ -183,6 +192,8 @@ class ApprovalEngine:
 
     def create_request(self, **kwargs: Any) -> ApprovalRequestData:
         """EPIC-08-T04: Create an approval request."""
+        if not kwargs.get("diff_hash") and (kwargs.get("diff_before") or kwargs.get("diff_after")):
+            kwargs["diff_hash"] = compute_diff_hash(kwargs.get("diff_before", {}), kwargs.get("diff_after", {}))
         req = ApprovalRequestData(**kwargs)
         self._requests[req.id] = req
         logger.info("approval_request_created", id=req.id, type=req.approval_type, risk=req.risk_level)

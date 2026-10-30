@@ -1,6 +1,6 @@
 "use client";
 
-import { LayoutTemplate, GitBranch, ArrowRight, Plus } from "lucide-react";
+import { GitBranch } from "lucide-react";
 
 /**
  * Templates — EPIC-22 (Template Gallery)

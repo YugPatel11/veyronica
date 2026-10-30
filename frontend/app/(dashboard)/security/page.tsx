@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, AlertTriangle, Lock, Eye, Clock, Activity } from "lucide-react";
+import { Shield, AlertTriangle, Lock, Eye, Activity } from "lucide-react";
 import { StatCard } from "@/components/ui/stat-card";
 import { StatusBadge } from "@/components/ui/status-badge";
 

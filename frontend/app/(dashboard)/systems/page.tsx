@@ -3,12 +3,9 @@
 import {
   Plug,
   RefreshCw,
-  Activity,
-  Clock,
   AlertTriangle,
   CheckCircle2,
   XCircle,
-  Settings,
 } from "lucide-react";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { useState } from "react";

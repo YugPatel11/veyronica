@@ -1,6 +1,6 @@
 "use client";
 
-import { Settings as SettingsIcon, User, Bell, Shield, Palette } from "lucide-react";
+import { User, Bell, Shield, Palette } from "lucide-react";
 
 /**
  * Settings — EPIC-12 (Settings page)

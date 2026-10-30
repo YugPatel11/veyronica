@@ -161,11 +161,39 @@ class WorkflowExecutor:
         self, step: StepDefinition, state: RunState
     ) -> dict[str, Any]:
         """Execute an agent step (LLM call)."""
+        from app.llm import gateway
+        tier = step.model_tier or "standard"
+        resp = await gateway.complete(
+            prompt=step.description or f"Process step {step.name} for agent {step.agent}",
+            tier=tier,
+            run_id=state.get("run_id"),
+            agent_id=step.agent,
+        )
+        state["total_tokens"] = state.get("total_tokens", 0) + resp.total_tokens
+        state["total_cost_usd"] = round(state.get("total_cost_usd", 0.0) + resp.cost_usd, 6)
+
+        try:
+            from app.audit import ledger
+            ledger.append(
+                event_type="decision",
+                action=f"agent_step_{step.name}",
+                run_id=state.get("run_id"),
+                agent_id=step.agent,
+                reasoning=resp.content,
+                confidence=0.92,
+                model_used=resp.model,
+                tokens_used=resp.total_tokens,
+            )
+        except Exception:
+            pass
+
         return {
             "agent": step.agent,
-            "model_tier": step.model_tier,
+            "model_tier": tier,
             "status": "completed",
-            "output": f"[Agent {step.agent} completed: {step.description}]",
+            "output": resp.content,
+            "tokens": resp.total_tokens,
+            "cost_usd": resp.cost_usd,
         }
 
     async def _execute_approval_step(
@@ -177,8 +205,24 @@ class WorkflowExecutor:
         if autonomy == AutonomyLevel.AUTONOMOUS:
             return {"auto_approved": True, "reason": "Autonomous mode"}
 
+        approval_id = str(uuid.uuid4())
+        try:
+            from app.policy import approval_engine
+            appr = approval_engine.create_request(
+                run_id=state.get("run_id", ""),
+                task_id=step.name,
+                title=f"Approval needed: {step.name}",
+                description=step.description,
+                risk_level=step.risk_level or "medium",
+                approval_type=step.approval_type or "approval",
+            )
+            approval_id = appr.id
+        except Exception:
+            pass
+
         return {
             "approval_needed": True,
+            "approval_id": approval_id,
             "approval_type": step.approval_type,
             "risk_level": step.risk_level,
             "step_name": step.name,
@@ -189,11 +233,29 @@ class WorkflowExecutor:
         self, step: StepDefinition, state: RunState
     ) -> dict[str, Any]:
         """Execute a connector operation."""
+        from app.connectors.registry import registry
+        connector_id = step.connector or ""
+        operation = step.operation or ""
+        payload = state.get("input_data", {})
+        result = await registry.execute(connector_id, operation, payload)
+
+        try:
+            from app.audit import ledger
+            ledger.append(
+                event_type="connector_call",
+                action=f"{connector_id}.{operation}",
+                run_id=state.get("run_id"),
+                payload=payload,
+            )
+        except Exception:
+            pass
+
         return {
-            "connector": step.connector,
-            "operation": step.operation,
-            "status": "completed",
-            "output": f"[Connector {step.connector}.{step.operation} completed]",
+            "connector": connector_id,
+            "operation": operation,
+            "status": "completed" if result.success else "failed",
+            "data": result.data,
+            "error": result.error,
         }
 
     async def _execute_parallel_step(

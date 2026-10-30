@@ -206,8 +206,44 @@ steps:
     model_tier: economy
 """
 
-# EPIC-07-T14: Pre-built workflow definitions
+HR_LEAVE_WORKFLOW = """
+name: "Faculty & Staff Leave Request"
+slug: "leave-request"
+version: 1
+description: "Extensible HR workflow: check balance, evaluate coverage, approval, and record in HR"
+trigger: manual
+autonomy_default: supervised
+on_failure: escalate
+steps:
+  - name: "Check Leave Balance"
+    type: connector
+    connector: hr-system
+    operation: get_leave_balance
+
+  - name: "Coverage Impact Assessment"
+    type: agent
+    agent: analysis
+    model_tier: standard
+
+  - name: "HOD Approval"
+    type: approval
+    approval_type: approval
+    risk_level: medium
+
+  - name: "Apply Leave Record"
+    type: connector
+    connector: hr-system
+    operation: apply_leave
+
+  - name: "Notify Faculty"
+    type: agent
+    agent: communication
+    model_tier: economy
+"""
+
+# EPIC-07-T14 & EPIC-22-T01: Pre-built workflow definitions
 BUILTIN_WORKFLOWS = {
     "exam-marks-processing": EXAM_MARKS_WORKFLOW,
     "leave-application": LEAVE_APPLICATION_WORKFLOW,
+    "leave-request": HR_LEAVE_WORKFLOW,
 }

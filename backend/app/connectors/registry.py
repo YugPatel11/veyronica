@@ -42,6 +42,10 @@ class ConnectorRegistry:
         """Get a registered connector by ID."""
         return self._connectors.get(connector_id)
 
+    def get_circuit_breaker(self, connector_id: str) -> CircuitBreaker | None:
+        """Get the circuit breaker for a registered connector."""
+        return self._breakers.get(connector_id)
+
     def list_all(self) -> list[dict[str, Any]]:
         """List all connectors with their status."""
         result = []

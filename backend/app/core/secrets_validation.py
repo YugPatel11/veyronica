@@ -17,7 +17,7 @@ class SecretValidationError(Exception):
 
 
 _WEAK_DEFAULTS = {
-    "CHANGE-ME",
+    "change-me",
     "changeme",
     "secret",
     "password",

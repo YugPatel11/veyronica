@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   Activity,
   CheckSquare,
@@ -265,13 +266,13 @@ export default function OverviewPage() {
                 Recent Workflow Runs
               </h2>
             </div>
-            <a
+            <Link
               href="/workflows"
               className="flex items-center gap-1 text-xs font-medium transition-colors"
               style={{ color: "var(--color-primary)" }}
             >
               View all <ArrowRight size={12} />
-            </a>
+            </Link>
           </div>
 
           <div className="overflow-x-auto">
@@ -288,7 +289,9 @@ export default function OverviewPage() {
               </thead>
               <tbody>
                 {RECENT_RUNS.map((run) => {
-                  const [done, total] = run.steps.split("/").map(Number);
+                  const [doneStr, totalStr] = run.steps.split("/");
+                  const done = Number(doneStr ?? 0);
+                  const total = Number(totalStr ?? 1);
                   return (
                     <tr
                       key={run.id}
@@ -339,13 +342,13 @@ export default function OverviewPage() {
                 Connected Systems
               </h2>
             </div>
-            <a
+            <Link
               href="/systems"
               className="flex items-center gap-1 text-xs font-medium transition-colors"
               style={{ color: "var(--color-primary)" }}
             >
               Details <ArrowRight size={12} />
-            </a>
+            </Link>
           </div>
 
           <div className="space-y-1 p-3">
@@ -418,7 +421,7 @@ export default function OverviewPage() {
               { label: "Open Copilot", icon: Zap, href: "/copilot" },
               { label: "View Audit Trail", icon: GitBranch, href: "/audit" },
             ].map((action) => (
-              <a
+              <Link
                 key={action.label}
                 href={action.href}
                 className="flex items-center gap-3 rounded-[var(--radius-md)] border px-4 py-3 text-sm font-medium text-[var(--color-ink)] transition-all hover:border-[var(--color-primary-tint)] hover:bg-[var(--color-primary-subtle)] hover:text-[var(--color-primary)]"
@@ -427,7 +430,7 @@ export default function OverviewPage() {
                 <action.icon size={18} strokeWidth={1.75} />
                 {action.label}
                 <ArrowRight size={14} className="ml-auto opacity-0 transition-opacity group-hover:opacity-100" />
-              </a>
+              </Link>
             ))}
 
             {/* Budget usage mini-widget */}

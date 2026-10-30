@@ -44,12 +44,17 @@ const statusStyles: Record<string, { dot: string; line: string }> = {
   },
 };
 
+const defaultStatusStyle: { dot: string; line: string } = {
+  dot: "bg-[var(--color-surface-sunken)] border-[var(--color-border)]",
+  line: "bg-[var(--color-border-subtle)]",
+};
+
 export function Timeline({ entries, className }: TimelineProps) {
   return (
     <div className={cn("relative space-y-0", className)}>
       {entries.map((entry, index) => {
         const status = entry.status || "pending";
-        const styles = statusStyles[status];
+        const styles = statusStyles[status] ?? defaultStatusStyle;
         const isLast = index === entries.length - 1;
 
         return (
