@@ -235,14 +235,14 @@
 
 ### EPIC-17: WF3 — Admin Copilot
 
-- [ ] `EPIC-17-T01` — Copilot Agent with fixed tool set *(EPIC-06)*
-- [ ] `EPIC-17-T02` — Tool registration (read tools: get_students, get_marks, get_pass_fail, etc.) *(T01)*
-- [ ] `EPIC-17-T03` — Write tool confirmation cards *(T01, EPIC-08)*
-- [ ] `EPIC-17-T04` — Read-only analytics queries (allowlisted views, row limits, timeouts) *(T01)*
-- [ ] `EPIC-17-T05` — Chart/table response rendering *(T01, EPIC-02-T13)*
+- [x] `EPIC-17-T01` — Copilot Agent with fixed tool set *(EPIC-06)*
+- [x] `EPIC-17-T02` — Tool registration (read tools: get_students, get_marks, get_pass_fail, etc.) *(T01)*
+- [x] `EPIC-17-T03` — Write tool confirmation cards *(T01, EPIC-08)*
+- [x] `EPIC-17-T04` — Read-only analytics queries (allowlisted views, row limits, timeouts) *(T01)*
+- [x] `EPIC-17-T05` — Chart/table response rendering *(T01, EPIC-02-T13)*
 - [x] `EPIC-17-T06` — Chat UI (full page + sheet) *(EPIC-12-T04)*
-- [ ] `EPIC-17-T07` — Multi-step plan execution with progress display *(T01, EPIC-07)*
-- [ ] `EPIC-17-T08` — Security: user-provided text as data, not instructions *(T01, EPIC-06-T07)*
+- [x] `EPIC-17-T07` — Multi-step plan execution with progress display *(T01, EPIC-07)*
+- [x] `EPIC-17-T08` — Security: user-provided text as data, not instructions *(T01, EPIC-06-T07)*
 
 ### EPIC-18: WF4 — Security Incident Response
 

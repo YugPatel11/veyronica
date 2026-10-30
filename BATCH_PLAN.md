@@ -58,13 +58,13 @@
 ---
 
 ## Batch 6: WF3 — Admin Copilot
-- [ ] 30. `EPIC-17-T01` Copilot Agent with fixed tool set | Files: `backend/app/workflow/copilot/agent.py` | Deps: none | Risk: High
-- [ ] 31. `EPIC-17-T02` Tool registration (read tools: get_students, get_marks, get_pass_fail, etc.) | Files: `backend/app/workflow/copilot/tools.py` | Deps: 30 | Risk: Med
-- [ ] 32. `EPIC-17-T03` Write tool confirmation cards | Files: `frontend/components/copilot/ConfirmationCard.tsx`, `backend/app/workflow/copilot/write_tools.py` | Deps: 31 | Risk: Med
-- [ ] 33. `EPIC-17-T04` Read-only analytics queries (allowlisted views, row limits, timeouts) | Files: `backend/app/workflow/copilot/analytics_queries.py` | Deps: 31 | Risk: Med
-- [ ] 34. `EPIC-17-T05` Chart/table response rendering | Files: `frontend/components/copilot/ResponseRenderer.tsx` | Deps: 33, 04 | Risk: Low
-- [ ] 35. `EPIC-17-T07` Multi-step plan execution with progress display | Files: `backend/app/workflow/copilot/planner.py`, `frontend/components/copilot/PlanProgress.tsx` | Deps: 30 | Risk: Med
-- [ ] 36. `EPIC-17-T08` Security: user-provided text as data, not instructions | Files: `backend/app/workflow/copilot/sanitization.py` | Deps: 30 | Risk: High
+- [x] 30. `EPIC-17-T01` Copilot Agent with fixed tool set | DONE: copilot/agent.py
+- [x] 31. `EPIC-17-T02` Tool registration (read tools: get_students, get_marks, get_pass_fail, etc.) | DONE: copilot/tools.py
+- [x] 32. `EPIC-17-T03` Write tool confirmation cards | DONE: ConfirmationCard.tsx, copilot/write_tools.py
+- [x] 33. `EPIC-17-T04` Read-only analytics queries (allowlisted views, row limits, timeouts) | DONE: copilot/analytics_queries.py
+- [x] 34. `EPIC-17-T05` Chart/table response rendering | DONE: ResponseRenderer.tsx
+- [x] 35. `EPIC-17-T07` Multi-step plan execution with progress display | DONE: copilot/planner.py, PlanProgress.tsx
+- [x] 36. `EPIC-17-T08` Security: user-provided text as data, not instructions | DONE: copilot/sanitization.py
 
 ---
 
