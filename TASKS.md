@@ -211,11 +211,11 @@
 
 ### EPIC-15: WF1 — Exam Result Cycle
 
-- [ ] `EPIC-15-T01` — Ingestion Agent: upload handler, file validation, storage *(EPIC-05-T12)*
-- [ ] `EPIC-15-T02` — Ingestion Agent: OCR/vision extraction of answers *(T01, EPIC-06)*
-- [ ] `EPIC-15-T03` — Evaluation Agent: marking against rubric with confidence *(EPIC-06)*
-- [ ] `EPIC-15-T04` — Evaluation Agent: structured decision records *(T03)*
-- [ ] `EPIC-15-T05` — Verifier: marks sum, range checks, confidence threshold *(EPIC-07-T05)*
+- [x] `EPIC-15-T01` — Ingestion Agent: upload handler, file validation, storage *(EPIC-05-T12)*
+- [x] `EPIC-15-T02` — Ingestion Agent: OCR/vision extraction of answers *(T01, EPIC-06)*
+- [x] `EPIC-15-T03` — Evaluation Agent: marking against rubric with confidence *(EPIC-06)*
+- [x] `EPIC-15-T04` — Evaluation Agent: structured decision records *(T03)*
+- [x] `EPIC-15-T05` — Verifier: marks sum, range checks, confidence threshold *(EPIC-07-T05)*
 - [ ] `EPIC-15-T06` — Analysis Agent: performance trends, risk scoring *(EPIC-06)*
 - [ ] `EPIC-15-T07` — Communication Agent: parent email drafting *(EPIC-05-T10)*
 - [ ] `EPIC-15-T08` — End-to-end integration: upload → ERP → email → CRM *(T01–T07, EPIC-05, EPIC-08)*

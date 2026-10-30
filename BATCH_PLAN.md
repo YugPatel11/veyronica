@@ -31,11 +31,11 @@
 ---
 
 ## Batch 3: WF1 Ingestion & Evaluation Agents
-- [ ] 15. `EPIC-15-T01` Ingestion Agent: upload handler, file validation, storage | Files: `backend/app/workflow/exam/ingestion.py` | Deps: none | Risk: Med
-- [ ] 16. `EPIC-15-T02` Ingestion Agent: OCR/vision extraction of answers | Files: `backend/app/workflow/exam/ocr.py` | Deps: 15 | Risk: Med
-- [ ] 17. `EPIC-15-T03` Evaluation Agent: marking against rubric with confidence | Files: `backend/app/workflow/exam/evaluation.py` | Deps: 16 | Risk: High
-- [ ] 18. `EPIC-15-T04` Evaluation Agent: structured decision records | Files: `backend/app/workflow/exam/decisions.py` | Deps: 17 | Risk: Med
-- [ ] 19. `EPIC-15-T05` Verifier: marks sum, range checks, confidence threshold | Files: `backend/app/workflow/exam/verifier.py` | Deps: 18 | Risk: Med
+- [x] 15. `EPIC-15-T01` Ingestion Agent: upload handler, file validation, storage | DONE: exam/ingestion.py
+- [x] 16. `EPIC-15-T02` Ingestion Agent: OCR/vision extraction of answers | DONE: exam/ocr.py
+- [x] 17. `EPIC-15-T03` Evaluation Agent: marking against rubric with confidence | DONE: exam/evaluation.py
+- [x] 18. `EPIC-15-T04` Evaluation Agent: structured decision records | DONE: exam/decisions.py
+- [x] 19. `EPIC-15-T05` Verifier: marks sum, range checks, confidence threshold | DONE: exam/verifier.py
 
 ---
 
