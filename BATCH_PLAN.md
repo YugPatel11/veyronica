@@ -19,14 +19,14 @@
 ---
 
 ## Batch 2: Frontend Navigation & Shell
-- [ ] 07. `EPIC-10-T04` Frontend SSE hook (useNexusEvents) with reconnection | Files: `frontend/lib/useNexusEvents.ts` | Deps: none | Risk: Med
-- [ ] 08. `EPIC-12-T01` AppShell layout (sidebar + header + content) | Files: `frontend/components/shell/AppShell.tsx`, `frontend/app/(dashboard)/layout.tsx` | Deps: none | Risk: Med
-- [ ] 09. `EPIC-12-T02` Role-aware sidebar with grouped navigation | Files: `frontend/components/shell/Sidebar.tsx` | Deps: 08 | Risk: Low
-- [ ] 10. `EPIC-12-T03` Command palette (Ctrl+K) with search across pages/runs/approvals | Files: `frontend/components/shell/CommandPalette.tsx` | Deps: 08 | Risk: Low
-- [ ] 11. `EPIC-12-T04` CopilotSheet (slide-over, right side, every page) | Files: `frontend/components/shell/CopilotSheet.tsx` | Deps: 08 | Risk: Low
-- [ ] 12. `EPIC-12-T05` Breadcrumb navigation | Files: `frontend/components/shell/Breadcrumbs.tsx` | Deps: 08 | Risk: Low
-- [ ] 13. `EPIC-12-T06` Responsive layout (tablet sidebar collapse, mobile hamburger) | Files: `frontend/components/shell/ResponsiveNav.tsx` | Deps: 08, 09 | Risk: Low
-- [ ] 14. `EPIC-12-T07` Keyboard navigation (Tab order, Escape closes panels) | Files: `frontend/components/shell/KeyboardNav.tsx` | Deps: 08, 10, 11 | Risk: Low
+- [x] 07. `EPIC-10-T04` Frontend SSE hook (useNexusEvents) with reconnection | DONE: useNexusEvents.ts & events.test.ts
+- [x] 08. `EPIC-12-T01` AppShell layout (sidebar + header + content) | DONE: components/shell/AppShell.tsx
+- [x] 09. `EPIC-12-T02` Role-aware sidebar with grouped navigation | DONE: components/shell/Sidebar.tsx
+- [x] 10. `EPIC-12-T03` Command palette (Ctrl+K) with search across pages/runs/approvals | DONE: components/shell/CommandPalette.tsx
+- [x] 11. `EPIC-12-T04` CopilotSheet (slide-over, right side, every page) | DONE: components/shell/CopilotSheet.tsx
+- [x] 12. `EPIC-12-T05` Breadcrumb navigation | DONE: components/shell/Breadcrumbs.tsx
+- [x] 13. `EPIC-12-T06` Responsive layout (tablet sidebar collapse, mobile hamburger) | DONE: components/shell/ResponsiveNav.tsx
+- [x] 14. `EPIC-12-T07` Keyboard navigation (Tab order, Escape closes panels) | DONE: components/shell/KeyboardNav.tsx
 
 ---
 

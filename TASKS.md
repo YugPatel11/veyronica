@@ -148,7 +148,7 @@
 - [x] `EPIC-10-T01` — Event emitter (worker → Redis pub/sub) *(EPIC-01-T02)*
 - [x] `EPIC-10-T02` — SSE endpoint with auth (short-lived token) *(T01, EPIC-04-T01)*
 - [x] `EPIC-10-T03` — Event filtering (by run_id, type, role) *(T02, EPIC-04-T02)*
-- [ ] `EPIC-10-T04` — Frontend SSE hook (useNexusEvents) with reconnection *(T02, EPIC-01-T07)*
+- [x] `EPIC-10-T04` — Frontend SSE hook (useNexusEvents) with reconnection *(T02, EPIC-01-T07)*
 - [x] `EPIC-10-T05` — Event schema (TypedDict backend, TypeScript frontend) *(T01)*
 
 ### EPIC-11: Mock Enterprise Systems
@@ -175,13 +175,13 @@
 
 ### EPIC-12: Dashboard Shell & Navigation
 
-- [ ] `EPIC-12-T01` — AppShell layout (sidebar + header + content) *(EPIC-02-T07)*
-- [ ] `EPIC-12-T02` — Role-aware sidebar with grouped navigation *(T01, EPIC-04-T02)*
-- [ ] `EPIC-12-T03` — Command palette (Ctrl+K) with search across pages/runs/approvals *(EPIC-02-T07)*
-- [ ] `EPIC-12-T04` — CopilotSheet (slide-over, right side, every page) *(EPIC-02-T07)*
-- [ ] `EPIC-12-T05` — Breadcrumb navigation *(T01)*
-- [ ] `EPIC-12-T06` — Responsive layout (tablet sidebar collapse, mobile hamburger) *(T01)*
-- [ ] `EPIC-12-T07` — Keyboard navigation (Tab order, Escape closes panels) *(T01)*
+- [x] `EPIC-12-T01` — AppShell layout (sidebar + header + content) *(EPIC-02-T07)*
+- [x] `EPIC-12-T02` — Role-aware sidebar with grouped navigation *(T01, EPIC-04-T02)*
+- [x] `EPIC-12-T03` — Command palette (Ctrl+K) with search across pages/runs/approvals *(EPIC-02-T07)*
+- [x] `EPIC-12-T04` — CopilotSheet (slide-over, right side, every page) *(EPIC-02-T07)*
+- [x] `EPIC-12-T05` — Breadcrumb navigation *(T01)*
+- [x] `EPIC-12-T06` — Responsive layout (tablet sidebar collapse, mobile hamburger) *(T01)*
+- [x] `EPIC-12-T07` — Keyboard navigation (Tab order, Escape closes panels) *(T01)*
 - [x] `EPIC-12-T08` — Notification bell with unread count *(T01, EPIC-21)*
 
 ### EPIC-13: Mission Control & Agent Map
