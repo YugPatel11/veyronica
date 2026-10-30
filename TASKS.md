@@ -246,13 +246,13 @@
 
 ### EPIC-18: WF4 — Security Incident Response
 
-- [ ] `EPIC-18-T01` — Rule engine: failed login detection (N in M minutes) *(EPIC-03-T08)*
-- [ ] `EPIC-18-T02` — Rule engine: unusual login detection *(T01)*
-- [ ] `EPIC-18-T03` — Rule engine: suspicious operations detection *(T01)*
-- [ ] `EPIC-18-T04` — Rule engine: traffic anomaly / rate limiting *(T01, EPIC-04-T05)*
-- [ ] `EPIC-18-T05` — Security Agent: context gathering + incident summary *(T01–T04, EPIC-06)*
-- [ ] `EPIC-18-T06` — Automated temporary responses (lockout, IP block) *(T05)*
-- [ ] `EPIC-18-T07` — Admin notification (email + Telegram + dashboard) *(T06, EPIC-21)*
+- [x] `EPIC-18-T01` — Rule engine: failed login detection (N in M minutes) *(EPIC-03-T08)*
+- [x] `EPIC-18-T02` — Rule engine: unusual login detection *(T01)*
+- [x] `EPIC-18-T03` — Rule engine: suspicious operations detection *(T01)*
+- [x] `EPIC-18-T04` — Rule engine: traffic anomaly / rate limiting *(T01, EPIC-04-T05)*
+- [x] `EPIC-18-T05` — Security Agent: context gathering + incident summary *(T01–T04, EPIC-06)*
+- [x] `EPIC-18-T06` — Automated temporary responses (lockout, IP block) *(T05)*
+- [x] `EPIC-18-T07` — Admin notification (email + Telegram + dashboard) *(T06, EPIC-21)*
 
 ### EPIC-19: Audit Explorer & Governance UI
 

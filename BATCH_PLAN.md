@@ -69,13 +69,13 @@
 ---
 
 ## Batch 7: WF4 — Security Incident Response
-- [ ] 37. `EPIC-18-T01` Rule engine: failed login detection (N in M minutes) | Files: `backend/app/security_engine/failed_logins.py` | Deps: none | Risk: Med
-- [ ] 38. `EPIC-18-T02` Rule engine: unusual login detection | Files: `backend/app/security_engine/unusual_logins.py` | Deps: 37 | Risk: Med
-- [ ] 39. `EPIC-18-T03` Rule engine: suspicious operations detection | Files: `backend/app/security_engine/suspicious_ops.py` | Deps: 37 | Risk: Med
-- [ ] 40. `EPIC-18-T04` Rule engine: traffic anomaly / rate limiting | Files: `backend/app/security_engine/traffic_anomaly.py` | Deps: 37 | Risk: Med
-- [ ] 41. `EPIC-18-T05` Security Agent: context gathering + incident summary | Files: `backend/app/security_engine/agent.py` | Deps: 37-40 | Risk: High
-- [ ] 42. `EPIC-18-T06` Automated temporary responses (lockout, IP block) | Files: `backend/app/security_engine/actions.py` | Deps: 41 | Risk: Med
-- [ ] 43. `EPIC-18-T07` Admin notification (email + Telegram + dashboard) | Files: `backend/app/security_engine/notifier.py` | Deps: 41 | Risk: Low
+- [x] 37. `EPIC-18-T01` Rule engine: failed login detection (N in M minutes) | DONE: security_engine/failed_logins.py
+- [x] 38. `EPIC-18-T02` Rule engine: unusual login detection | DONE: security_engine/unusual_logins.py
+- [x] 39. `EPIC-18-T03` Rule engine: suspicious operations detection | DONE: security_engine/suspicious_ops.py
+- [x] 40. `EPIC-18-T04` Rule engine: traffic anomaly / rate limiting | DONE: security_engine/traffic_anomaly.py
+- [x] 41. `EPIC-18-T05` Security Agent: context gathering + incident summary | DONE: security_engine/agent.py
+- [x] 42. `EPIC-18-T06` Automated temporary responses (lockout, IP block) | DONE: security_engine/actions.py
+- [x] 43. `EPIC-18-T07` Admin notification (email + Telegram + dashboard) | DONE: security_engine/notifier.py
 
 ---
 
