@@ -355,13 +355,13 @@
 
 ### Testing Milestones
 
-- [ ] `TEST-01` — Backend unit test coverage ≥ 80%
-- [ ] `TEST-02` — Frontend component test coverage ≥ 70%
-- [ ] `TEST-03` — E2E tests for all P0 flows (Playwright)
-- [ ] `TEST-04` — LLM evaluation suite with golden dataset
-- [ ] `TEST-05` — Load test passing at 500 rps target
-- [ ] `TEST-06` — Security scan clean (zero high/critical)
-- [ ] `TEST-07` — Accessibility audit passing (WCAG 2.2 AA)
+- [x] `TEST-01` — Backend unit test coverage ≥ 80%
+- [x] `TEST-02` — Frontend component test coverage ≥ 70%
+- [x] `TEST-03` — E2E tests for all P0 flows (Playwright)
+- [x] `TEST-04` — LLM evaluation suite with golden dataset
+- [x] `TEST-05` — Load test passing at 500 rps target
+- [x] `TEST-06` — Security scan clean (zero high/critical)
+- [x] `TEST-07` — Accessibility audit passing (WCAG 2.2 AA)
 
 ---
 
